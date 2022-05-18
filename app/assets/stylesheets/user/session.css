@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.si_main {
+  width: 100%;
+  height: calc(100vh - 80px - 100px);
+}
+
+.si_container {
+  width: 100%;
+  height: 100%;
+  padding-top: 100px;
+}
+
+.sign_in_card {
+  width: 28%;
+  height: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.si_title {
+  margin-bottom: 50px;
+}
+
+.si_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.si_form input {
+  margin-bottom: 30px;
+  padding: 5px;
+}
+
+.si_submit {
+  width: 50%;
+  border-radius: 30px;
+  border: 1px solid #ccc;
+}
