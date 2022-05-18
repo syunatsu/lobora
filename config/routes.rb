@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: "menu#index"
+  root to: "menus#index"
   resources :menus, only: [:index]
 end
