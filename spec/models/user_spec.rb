@@ -20,7 +20,7 @@ RSpec.describe User, type: :model do
       it 'nicknameが20文字を超えると登録できない' do
         @user.nickname = 'aaaaaaaaaaaaaaaaaaaaa'
         @user.valid?
-        expect(@user.errors.full_messages).to include("Nickname is too long (maximum is 20 characters)")
+        expect(@user.errors.full_messages).to include('Nickname is too long (maximum is 20 characters)')
       end
       it 'emailが空では登録できない' do
         @user.email = ''
@@ -30,7 +30,7 @@ RSpec.describe User, type: :model do
       it 'emailに@が無いと登録できない' do
         @user.email = 'test.mail'
         @user.valid?
-        expect(@user.errors.full_messages).to include("Email is invalid")
+        expect(@user.errors.full_messages).to include('Email is invalid')
       end
       it 'passwordが空では登録できない' do
         @user.password = ''
@@ -40,7 +40,7 @@ RSpec.describe User, type: :model do
       it 'passwordが6文字未満では登録できない' do
         @user.password = 'aaaaa'
         @user.valid?
-        expect(@user.errors.full_messages).to include("Password is too short (minimum is 6 characters)")
+        expect(@user.errors.full_messages).to include('Password is too short (minimum is 6 characters)')
       end
       it 'passwordとpassword_confirmationが不一致では登録できない' do
         @user.password = 'aaaaaa'
