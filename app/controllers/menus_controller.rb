@@ -1,14 +1,13 @@
 class MenusController < ApplicationController
-
   def top
   end
 
   def index
-    @foods = Menu.find_by(category_id: 1)
-    @dolces = Menu.find_by(category_id: 2)
-    @drinks = Menu.find_by(category_id: 3)
+    @foods = Menu.where(category_id: 1)
+    @dolces = Menu.where(category_id: 2)
+    @drinks = Menu.where(category_id: 3)
 
-    render "menus/_#{params[:name]}", locals: {foods: @foods, dolces: @dolces, drinks: @drinks}
+    render "menus/_#{params[:name]}", locals: { foods: @foods, dolces: @dolces, drinks: @drinks }
   end
 
   def new
@@ -16,7 +15,6 @@ class MenusController < ApplicationController
   end
 
   def create
-    binding.pry
     @menu = Menu.new(menu_params)
     if @menu.save
       redirect_to root_path
