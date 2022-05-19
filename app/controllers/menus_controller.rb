@@ -7,9 +7,10 @@ class MenusController < ApplicationController
   end
 
   def create
+    binding.pry
     @menu = Menu.new(menu_params)
     if @menu.save
-      redirect to root_path
+      redirect_to root_path
     else
       render :new
     end
@@ -17,6 +18,6 @@ class MenusController < ApplicationController
 
   private
   def menu_params
-    params.require.(:menu).permit(:name, :explain, :recipe, :how_to, :price, :cotegory_id, :image).merge(user_id: current_user.id)
+    params.require(:menu).permit(:name, :explain, :recipe, :how_to, :price, :category_id, :image).merge(user_id: current_user.id)
   end
 end
