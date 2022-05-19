@@ -20,7 +20,7 @@ RSpec.describe Menu, type: :model do
       it 'nameが31文字以上では投稿できない' do
         @menu.name = Faker::Lorem.characters(number: 31)
         @menu.valid?
-        expect(@menu.errors.full_messages).to include("Name is too long (maximum is 30 characters)")
+        expect(@menu.errors.full_messages).to include('Name is too long (maximum is 30 characters)')
       end
       it 'explainが空では投稿できない' do
         @menu.explain = ''
@@ -30,7 +30,7 @@ RSpec.describe Menu, type: :model do
       it 'explainが251文字以上では投稿できない' do
         @menu.explain = Faker::Lorem.characters(number: 251)
         @menu.valid?
-        expect(@menu.errors.full_messages).to include("Explain is too long (maximum is 250 characters)")
+        expect(@menu.errors.full_messages).to include('Explain is too long (maximum is 250 characters)')
       end
       it 'recipeが空では投稿できない' do
         @menu.recipe = ''
@@ -40,7 +40,7 @@ RSpec.describe Menu, type: :model do
       it 'recipeが401文字以上では投稿できない' do
         @menu.recipe = Faker::Lorem.characters(number: 401)
         @menu.valid?
-        expect(@menu.errors.full_messages).to include("Recipe is too long (maximum is 400 characters)")
+        expect(@menu.errors.full_messages).to include('Recipe is too long (maximum is 400 characters)')
       end
       it 'how_toが空では投稿できない' do
         @menu.how_to = ''
@@ -50,7 +50,7 @@ RSpec.describe Menu, type: :model do
       it 'how_toが1001文字以上では投稿できない' do
         @menu.how_to = Faker::Lorem.characters(number: 1001)
         @menu.valid?
-        expect(@menu.errors.full_messages).to include("How to is too long (maximum is 1000 characters)")
+        expect(@menu.errors.full_messages).to include('How to is too long (maximum is 1000 characters)')
       end
       it 'priceが空では投稿できない' do
         @menu.price = ''
@@ -60,7 +60,7 @@ RSpec.describe Menu, type: :model do
       it 'priceが半角数字以外では投稿できない' do
         @menu.price = '１０００'
         @menu.valid?
-        expect(@menu.errors.full_messages).to include("Price is invalid")
+        expect(@menu.errors.full_messages).to include('Price is invalid')
       end
       it 'category_idが空では投稿できない' do
         @menu.category_id = ''
@@ -75,12 +75,12 @@ RSpec.describe Menu, type: :model do
       it 'imageが空では投稿できない' do
         @menu.image = nil
         @menu.valid?
-        expect(@menu.errors.full_messages).to include("Image を1枚添付してください")
+        expect(@menu.errors.full_messages).to include('Image を1枚添付してください')
       end
       it 'userと紐づいていなければ投稿できない' do
         @menu.user = nil
         @menu.valid?
-        expect(@menu.errors.full_messages).to include("User must exist")
+        expect(@menu.errors.full_messages).to include('User must exist')
       end
     end
   end
