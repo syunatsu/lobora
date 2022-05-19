@@ -23,15 +23,15 @@
     <figure class="menu_image_boxes">
       <div class="img_box">
         <%= image_tag 'image3.jpeg', alt: "FOODの画像" %>
-        <p>FOOD</p>
+        <%= link_to 'FOOD', {controller: 'menus', action: 'index', name: 'food'}, class: 'top_food' %>
       </div>
       <div class="img_box">
         <%= image_tag 'image4.jpeg', alt: "DOLCEの画像" %>
-        <p>DOLCE</p>
+        <%= link_to 'DOLCE', {controller: 'menus', action: 'index', name: 'dolce'}, class: 'top_dolce' %>
       </div>
       <div class="img_box">
       <%= image_tag 'image5.jpeg', alt: "DRINKの画像" %>
-        <p>DRINK</p>
+        <%= link_to 'DRINK', {controller: 'menus', action: 'index', name: 'drink'}, class: 'top_drink' %>
       </div>
     </figure>
   </section>

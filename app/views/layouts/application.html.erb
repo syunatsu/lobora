@@ -17,9 +17,9 @@
           <div class="right_menus1">
             <ul>
               <li><%= link_to 'HOME', root_path, class: 'header_home' %></li>
-              <li><%= link_to 'FOOD', root_path, class: 'header_food' %></li>
-              <li><%= link_to 'DOLCE', root_path, class: 'header_dolce' %></li>
-              <li><%= link_to 'DRINK', root_path, class: 'header_drink' %></li>
+              <li><%= link_to 'FOOD', {controller: 'menus', action: 'index', name: 'food'}, class: 'header_food' %></li>
+              <li><%= link_to 'DOLCE', {controller: 'menus', action: 'index', name: 'dolce'}, class: 'header_dolce' %></li>
+              <li><%= link_to 'DRINK', {controller: 'menus', action: 'index', name: 'drink'}, class: 'header_drink' %></li>
               <li><%= link_to 'NEW RECIPE', new_menu_path, class: 'header_newmenu' %></li>
               <li><%= link_to 'SIGN OUT', destroy_user_session_path, method: :delete, class: 'header_signout' %> </li>
             </ul>
