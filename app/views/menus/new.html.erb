@@ -1,0 +1,33 @@
+<main class="new_wrapper">
+  <div class="new_container">
+    
+    <div class="new_background_img">
+      <%= image_tag 'image8.jpeg' %>
+    </div>
+    <div class="new_titles">
+      <h2 class="new_first_title">New</h2>
+      <h2 class="new_second_title">Recipe</h2>
+    </div>
+
+    <div class="new_form_box">
+      <%= form_with model: @menu, local: true do |f| %>
+        <%= f.label :category_id, 'カテゴリー', class: "new_label" %>
+        <%= f.collection_select(:category_id, Category.all, :id, :name, {},{class:"new_input"}) %>
+        <%= f.label :name, '名前', class: 'new_label' %>
+        <%= f.text_field :name, class:"new_input" %>
+        <%= f.label :explain, '説明', class: 'new_label' %>
+        <%= f.text_area :explain, rows: 3, class:"new_input" %>
+        <%= f.label :recipe, 'レシピ', class: 'new_label' %>
+        <%= f.text_area :recipe, rows: 3, class:"new_input" %>
+        <%= f.label :how_to, '作り方', class: 'new_label' %>
+        <%= f.text_area :how_to, rows: 3, class:"new_input" %>
+        <%= f.label :price, '値段', class: 'new_label' %>
+        <%= f.text_field :price, class:"new_input" %>
+        <%= f.file_field :image %>
+        <%= f.submit 'Send', class:"new_submit" %>
+        <%= link_to '◀︎ TOP', root_path, class: 'new_top' %>
+      <% end %>
+    </div>
+
+  </div>
+</main>

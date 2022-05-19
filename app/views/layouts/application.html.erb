@@ -10,42 +10,50 @@
   </head>
 
   <body>
-    <div class="wrapper">
-      <header>
-        <div class="header_left">LOBORA<br> cafe</div>
-        <div class="header_right">
-          <div class="right_menus">
+    <header>
+      <div class="header_left">LOBORA<br> cafe</div>
+      <div class="header_right">
+        <% if user_signed_in? %>
+          <div class="right_menus1">
             <ul>
-              <li>HOME</li>
-              <li>FOOD</li>
-              <li>DOLCE</li>
-              <li>DRINK</li>
+              <li><%= link_to 'HOME', root_path, class: 'header_home' %></li>
+              <li><%= link_to 'FOOD', root_path, class: 'header_food' %></li>
+              <li><%= link_to 'DOLCE', root_path, class: 'header_dolce' %></li>
+              <li><%= link_to 'DRINK', root_path, class: 'header_drink' %></li>
+              <li><%= link_to 'NEW RECIPE', new_menu_path, class: 'header_newmenu' %></li>
+              <li><%= link_to 'SIGN OUT', destroy_user_session_path, method: :delete, class: 'header_signout' %> </li>
             </ul>
           </div>
-          <div class="sign_out">SIGN OUT</div>
-        </div>
-      </header>
-      
-      <%= yield %>
+        <% else %>
+          <div class="right_menus2">
+            <ul>
+              <li><%= link_to 'SIGN UP', new_user_registration_path, class:'sign_up' %></li>
+              <li><%= link_to 'SIGN IN', new_user_session_path, class: 'sign_in' %></li>
+            </ul>
+          </div>
+        <% end %>
+      </div>
+    </header>
+    
+    <%= yield %>
 
-      <footer>
-        <div class="footer_left">
-          <p>Store info</p><br>
-          <p>住所：東京都千代田区丸の内１丁目</p>
-          <p>営業時間：11:00-21:00</p>
-          <p>不定休</p>
-        </div>
-        <div class="footer_center">
-          <p>Phone&mail</p><br>
-          <p>電話番号：03-1234-5678</p>
-          <p>メール：lobora@mail.com</p>
-        </div>
-        <div class="footer_right">
-          <p>SNS</p><br>
-          <p>Youtube</p>
-          <p>Instagram</p>
-        </div>
-      </footer>
-    </div>
+    <footer>
+      <div class="footer_left">
+        <p>Store info</p><br>
+        <p>住所：東京都千代田区丸の内１丁目</p>
+        <p>営業時間：11:00-21:00</p>
+        <p>不定休</p>
+      </div>
+      <div class="footer_center">
+        <p>Phone&mail</p><br>
+        <p>電話番号：03-1234-5678</p>
+        <p>メール：lobora@mail.com</p>
+      </div>
+      <div class="footer_right">
+        <p>SNS</p><br>
+        <p>Youtube</p>
+        <p>Instagram</p>
+      </div>
+    </footer>
   </body>
 </html>
