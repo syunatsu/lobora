@@ -1,0 +1,57 @@
+<div class="drink_container">
+  <section class="drink01">
+    <div class="drink_img_wrapper01">
+      <%= image_tag 'image26.jpeg', alt: 'フードの写真' %>
+    </div>
+    <div class="drink_overlay01"></div>
+    <p>こだわりの説明が入ります</p>
+  </section>
+
+  <section class="drink03">
+    <h2>recommended</h2>
+    <div class="drink_recommended01">
+      <div class="drink_img_wrapper04">
+        <%= image_tag 'image13.jpeg', alt: 'おすすめメニューの写真１' %>
+      </div>
+      <div class="drink_recommended_explain01">
+        <ul>
+          <li>メニュー名</li>
+          <li>説明</li>
+          <li>値段</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="drink_recommended02">
+      <div class="drink_img_wrapper05">
+        <%= image_tag 'image14.jpeg', alt: 'おすすめメニューの写真２' %>
+      </div>
+      <div class="drink_recommended_explain02">
+        <ul>
+          <li>メニュー名</li>
+          <li>説明</li>
+          <li>値段</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="drink04">
+    <div class="drink04_wrapper">
+      <h2>DRINK MENU</h2>
+      <div class="drink_menus">
+        <% drinks.each do |drink| %>
+          <div class="drink_menu">
+            <div class="drink_menu_img">
+              <%= image_tag(drink.image) %>
+            </div>
+            <div class="drink_menu_contents">
+              <div class="drink_menu_name"><%= drink.name %></div>
+              <div class="drink_menu_price">￥<%= drink.price %></div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </section>
+</div>

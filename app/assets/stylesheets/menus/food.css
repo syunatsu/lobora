@@ -1,0 +1,275 @@
+.food_container {
+  width: 100%;
+  height: auto;
+  margin-top: 80px;
+}
+
+/* ここからfood01 */
+.food01 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.food_img_wrapper01 {
+  width: 100%;
+  height: 100%;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+.food_img_wrapper01 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.food_overlay01 {
+  background-color: rgba(0, 0, 0, 0.25);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.food01 p {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* ここまでfood01 */
+
+/* ここからfood02 */
+.food02 {
+  width: 100%;
+  height: auto;
+  background-color: rgb(160, 125, 143);
+  padding-top: 6%;
+  padding-bottom: 85%;
+  position: relative;
+}
+
+.food02 h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 5%;
+  color: #fff;
+}
+
+.food_img_wrapper02 {
+  width: 46vw;
+  height: 70vh;
+  position: absolute;
+  top: 12%;
+  left: 6%;
+}
+
+.food_img_wrapper02 img {
+  width: 100%;
+  height: 100%;
+}
+
+.food_special_explain01 {
+  background-color: #fff;
+  width: 47vw;
+  height: 70vh;
+  position: absolute;
+  top: 15%;
+  left: 46%;
+}
+
+.food_special_explain01 ul {
+  margin: 12% 0 0 28%;
+}
+
+.food_img_wrapper03 {
+  width: 46vw;
+  height: 70vh;
+  position: absolute;
+  top: 56%;
+  left: 6%;
+}
+
+.food_img_wrapper03 img {
+  width: 100%;
+  height: 100%;
+}
+
+.food_special_explain02 {
+  background-color: #fff;
+  width: 47vw;
+  height: 70vh;
+  position: absolute;
+  top: 59%;
+  left: 46%;
+}
+
+.food_special_explain02 ul {
+  margin: 12% 0 0 28%;
+}
+/* ここまでfood02 */
+
+/* ここからfood03 */
+.food03 {
+  width: 100%;
+  height: auto;
+  background-color: rgb(212, 193, 206);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4%;
+  padding-bottom: 8%;
+}
+
+.food03 h2 {
+  font-size: 2rem;
+  margin-bottom: 5%;
+  color: #fff;
+}
+
+.food_recommended01 {
+  width: 60%;
+  height: 40vh;
+  background-color: #fff;
+  margin-bottom: 2%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.food_img_wrapper04 {
+  width: 45%;
+  height: 80%;
+  margin-left: 3%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.food_img_wrapper04 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.food_recommended_explain01 {
+  width: 45%;
+  height: 80%;
+  margin-right: 3%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.food_recommended_explain01 li {
+  list-style: none;
+}
+
+.food_recommended_explain01 li:first-child{
+  font-size: 1.5rem;
+}
+
+.food_recommended02 {
+  width: 60%;
+  height: 40vh;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.food_img_wrapper05 {
+  width: 45%;
+  height: 80%;
+  margin-left: 3%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.food_img_wrapper05 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.food_recommended_explain02 {
+  width: 45%;
+  height: 80%;
+  margin-right: 3%;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.food_recommended_explain02 li {
+  list-style: none;
+}
+
+.food_recommended_explain02 li:first-child{
+  font-size: 1.5rem;
+}
+/* ここまでfood03 */
+
+/* ここからfood04 */
+.food04 {
+  width: 100%;
+  height: auto;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background-color: rgb(245, 244, 236);
+}
+
+.food04_wrapper {
+  width: 83%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.food04 h2 {
+  font-size: 2rem;
+  margin-bottom: 5%;
+  text-align: center;
+  color: #000;
+
+}
+
+.food_menus {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.food_menu {
+  width: 33.3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 2%;
+}
+
+.food_menu_img {
+  width: 90%;
+  height: 100%;
+  margin-bottom: 2%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.food_menu_img img {
+  width: 100%;
+  height: 100%;
+}
+
+.food_menu_contents {
+  margin-left: 5%;
+}
+
+.food_menu_name {
+  margin-bottom: 30%;
+}
+/* ここまでfood04 */

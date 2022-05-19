@@ -1,27 +1,25 @@
 <div class="food_container">
   <section class="food01">
     <div class="food_img_wrapper01">
-      <%# <%= img_tag '', alt: 'フードの写真' %> %>
+      <%= image_tag 'image10.jpeg', alt: 'フードの写真' %>
     </div>
+    <div class="food_overlay01"></div>
     <p>こだわりの説明が入ります</p>
   </section>
 
   <section class="food02">
     <h2>Special menu</h2>
-    <div class="food_img_wrapper02">
-      <%# <%= image_tag '#', alt: 'スペシャルメニューの写真１' %> %>
-    </div>
-    <div class="food_special_explain01">
-      <ul>
-        <li>メニュー名</li>
-        <li>値段</li>
-        <li>メニュー内容</li>
-      </ul>
-    </div>
+      <div class="food_special_explain01">
+        <ul>
+          <li>メニュー名</li>
+          <li>値段</li>
+          <li>メニュー内容</li>
+        </ul>
+      </div>
+      <div class="food_img_wrapper02">
+        <%= image_tag 'image11.jpeg', alt: 'スペシャルメニューの写真１' %>
+      </div>
 
-    <div class="food_img_wrapper03">
-      <%# <%= image_tag '#', alt: 'スペシャルメニューの写真２' %> %>
-    </div>
     <div class="food_special_explain02">
       <ul>
         <li>メニュー名</li>
@@ -29,13 +27,16 @@
         <li>メニュー内容</li>
       </ul>
     </div>
+    <div class="food_img_wrapper03">
+      <%= image_tag 'image12.jpeg', alt: 'スペシャルメニューの写真２' %>
+    </div>
   </section>
 
   <section class="food03">
     <h2>recommended</h2>
     <div class="food_recommended01">
       <div class="food_img_wrapper04">
-        <%# <%= image_tag '#', alt: 'おすすめメニューの写真１'%> %>
+        <%= image_tag 'image13.jpeg', alt: 'おすすめメニューの写真１' %>
       </div>
       <div class="food_recommended_explain01">
         <ul>
@@ -48,7 +49,7 @@
 
     <div class="food_recommended02">
       <div class="food_img_wrapper05">
-        <%# <%= image_tag '#', alt: 'おすすめメニューの写真２'%> %>
+        <%= image_tag 'image14.jpeg', alt: 'おすすめメニューの写真２' %>
       </div>
       <div class="food_recommended_explain02">
         <ul>
@@ -61,15 +62,20 @@
   </section>
 
   <section class="food04">
-    <div class="food_menu">
-      <div class="food_img_wrapper_menu">
-        <%# <%= image_tag '' %> %>
-      </div>
-      <div class="food_menu_content">
-        <ul>
-          <li>メニュー名</li>
-          <li>値段</li>
-        </ul>
+    <div class="food04_wrapper">
+      <h2>FOOD MENU</h2>
+      <div class="food_menus">
+        <% foods.each do |food| %>
+          <div class="food_menu">
+            <div class="food_menu_img">
+              <%= image_tag(food.image) %>
+            </div>
+            <div class="food_menu_contents">
+              <div class="food_menu_name"><%= food.name %></div>
+              <div class="food_menu_price">￥<%= food.price %></div>
+            </div>
+          </div>
+        <% end %>
       </div>
     </div>
   </section>

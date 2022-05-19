@@ -1,0 +1,28 @@
+<div class="dolce_container">
+  <section class="dolce01">
+    <div class="dolce_img_wrapper01">
+      <%= image_tag 'image20.jpeg', alt: 'フードの写真' %>
+    </div>
+    <div class="dolce_overlay01"></div>
+    <p>こだわりの説明が入ります</p>
+  </section>
+
+  <section class="dolce02">
+    <div class="dolce02_wrapper">
+      <h2>DOLCE MENU</h2>
+      <div class="dolce_menus">
+        <% dolces.each do |dolce| %>
+          <div class="dolce_menu">
+            <div class="dolce_menu_img">
+              <%= image_tag(dolce.image) %>
+            </div>
+            <div class="dolce_menu_contents">
+              <div class="dolce_menu_name"><%= dolce.name %></div>
+              <div class="dolce_menu_price">￥<%= dolce.price %></div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </section>
+</div>
