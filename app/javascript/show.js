@@ -20,4 +20,4 @@ document.addEventListener("click", (e) => {
 });
 }
 
-window.addEventListener('load', popup)
+window.addEventListener('turbolinks:load', popup);

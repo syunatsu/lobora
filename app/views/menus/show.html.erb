@@ -26,7 +26,7 @@
 
   <section class="show03">
     <div class="show_form_box">
-      <%= form_with model: @menu, local: true do |f| %>
+      <%= form_with model: @menu, url: "/menus/#{@menu.id}", local: true do |f| %>
         <%= f.label :category_id, 'カテゴリー', class: "show_label" %>
         <%= f.collection_select(:category_id, Category.all, :id, :name, {},{class:"show_input"}) %>
         <%= f.label :name, '名前', class: 'show_label' %>

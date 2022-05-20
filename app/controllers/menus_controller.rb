@@ -27,16 +27,13 @@ class MenusController < ApplicationController
     @menu = Menu.find(params[:id])
   end
 
-  def edit
-    @menu = Menu.find(params[:id])
-  end
-
   def update
     @menu = Menu.find(params[:id])
-    if @menu.update(menu_params)
-      redirect_to
+    if @menu.valid?
+      @menu.update(menu_params)
+      redirect_to action: :show
     else
-      render :edit
+      render :show
     end
   end
 
