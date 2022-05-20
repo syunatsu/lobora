@@ -27,6 +27,16 @@ class MenusController < ApplicationController
     @menu = Menu.find(params[:id])
   end
 
+  def update
+    @menu = Menu.find(params[:id])
+    if @menu.valid?
+      @menu.update(menu_params)
+      redirect_to action: :show
+    else
+      render :show
+    end
+  end
+
   private
 
   def menu_params
