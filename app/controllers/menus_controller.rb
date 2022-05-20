@@ -33,7 +33,7 @@ class MenusController < ApplicationController
       @menu.update(menu_params)
       redirect_to action: :show
     else
-      render :show
+      redirect_back fallback_location: root_path
     end
   end
 
