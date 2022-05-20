@@ -1,0 +1,21 @@
+<div class="show_container">
+  <section class="show01">
+    <span class="show_menu_name">
+      <%= @menu.name %>
+    </span>
+    <div class="show_img_wrapper">
+      <%= image_tag(@menu.image) %>
+    </div>
+  </section>
+
+  <section class="show02">
+    <div class="show_menu_recipe">
+      <span>材料</span><br><br>
+      <%= @menu.recipe %>
+    </div>
+    <div class="show_menu_how_to">
+      <span>作り方</span><br><br>
+      <%= @menu.how_to %>
+    </div>
+  </section>
+</div>

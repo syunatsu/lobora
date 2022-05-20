@@ -68,10 +68,10 @@
         <% foods.each do |food| %>
           <div class="food_menu">
             <div class="food_menu_img">
-              <%= image_tag(food.image) %>
+              <%= link_to(image_tag(food.image), "/menus/#{food.id}/show") %>
             </div>
             <div class="food_menu_contents">
-              <div class="food_menu_name"><%= food.name %></div>
+              <div class="food_menu_name"><%= link_to food.name, "/menus/#{food.id}/show", action: :show %></div>
               <div class="food_menu_price">￥<%= food.price %></div>
             </div>
           </div>

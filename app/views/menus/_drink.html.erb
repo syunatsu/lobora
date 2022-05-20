@@ -43,10 +43,10 @@
         <% drinks.each do |drink| %>
           <div class="drink_menu">
             <div class="drink_menu_img">
-              <%= image_tag(drink.image) %>
+              <%= link_to(image_tag(drink.image), "/menus/#{drink.id}/show") %>
             </div>
             <div class="drink_menu_contents">
-              <div class="drink_menu_name"><%= drink.name %></div>
+              <div class="drink_menu_name"><%= link_to drink.name, "/menus/#{drink.id}/show" %></div>
               <div class="drink_menu_price">￥<%= drink.price %></div>
             </div>
           </div>
