@@ -37,6 +37,16 @@ class MenusController < ApplicationController
     end
   end
 
+  def destroy
+    @foods = Menu.where(category_id: 1)
+    @dolces = Menu.where(category_id: 2)
+    @drinks = Menu.where(category_id: 3)
+
+    menu = Menu.find(params[:id])
+    menu.destroy
+    render "menus/_#{(menu.category.name).downcase}", locals: { foods: @foods, dolces: @dolces, drinks: @drinks }
+  end
+
   private
 
   def menu_params

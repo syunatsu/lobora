@@ -18,9 +18,8 @@
       <%= @menu.how_to %>
     </div>
     <div class="show_buttons">
-      <button class="edit_btn">Edit</button>
-      <button class="delete_btn">Delete</button>
-      <%# <%= link_to 'Delete', %>
+      <span class="edit_btn">Edit</span>
+      <%= link_to 'Delete', menu_path(@menu), method: :delete, class: "delete_btn", data: {confirm: "コメントを削除しますか？"} %>
     </div>
   </section>
 
