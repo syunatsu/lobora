@@ -1,4 +1,6 @@
 class MenusController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create, :update, :destroy]
+
   def top
   end
 
@@ -44,7 +46,7 @@ class MenusController < ApplicationController
 
     menu = Menu.find(params[:id])
     menu.destroy
-    render "menus/_#{(menu.category.name).downcase}", locals: { foods: @foods, dolces: @dolces, drinks: @drinks }
+    render "menus/_#{menu.category.name.downcase}", locals: { foods: @foods, dolces: @dolces, drinks: @drinks }
   end
 
   private
