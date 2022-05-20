@@ -1,0 +1,65 @@
+.show_container {
+  width: 100%;
+  height: calc(100vh - 80px - 100px);
+  margin-top: 80px;
+  background: linear-gradient(#fff, rgb(175, 175, 175));
+}
+
+.show01 {
+  width: 100%;
+  height: 55%;
+  margin-bottom: 2%;
+}
+
+.show_menu_name {
+  display: inline-block;
+  margin-left: 30px;
+  padding-top: 30px;
+  font-size: 1.8rem;
+}
+
+.show_img_wrapper {
+  width: 30%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.show_img_wrapper img {
+  width: 90%;
+  height: 90%;
+  margin-left: 5%;
+}
+
+.show02 {
+  width: 80%;
+  height: 35%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.show02 span {
+  display: inline-block;
+  font-size: 1.2rem;
+  border-bottom: 2px solid black;
+}
+
+.show_menu_recipe {
+  width: 35%;
+  height: 100%;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 1%;
+  margin-right: 2%;
+  background-color: #fff;
+}
+
+.show_menu_how_to {
+  width: 50%;
+  height: 100%;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 1%;
+  background-color: #fff;
+}
+

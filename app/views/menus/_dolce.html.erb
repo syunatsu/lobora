@@ -14,10 +14,10 @@
         <% dolces.each do |dolce| %>
           <div class="dolce_menu">
             <div class="dolce_menu_img">
-              <%= image_tag(dolce.image) %>
+              <%= link_to(image_tag(dolce.image), "/menus/#{dolce.id}/show") %>
             </div>
             <div class="dolce_menu_contents">
-              <div class="dolce_menu_name"><%= dolce.name %></div>
+              <div class="dolce_menu_name"><%= link_to dolce.name, "#{dolce.id}/show" %></div>
               <div class="dolce_menu_price">￥<%= dolce.price %></div>
             </div>
           </div>
