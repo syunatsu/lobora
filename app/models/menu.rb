@@ -8,7 +8,6 @@ class Menu < ApplicationRecord
   validate :validate_image
 
   belongs_to :user
-  has_many :likes
   has_one_attached :image
 
   extend ActiveHash::Associations::ActiveRecordExtensions

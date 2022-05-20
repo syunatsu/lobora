@@ -7,5 +7,9 @@ class User < ApplicationRecord
   validates :nickname, presence: true, length: { maximum: 20 }
 
   has_many :menus
-  has_many :likes
+
+  # いいねされているかのメソッド
+  def liked_by?(menu_id)
+    likes.where(menu_id: menu_id).exists?
+  end
 end
