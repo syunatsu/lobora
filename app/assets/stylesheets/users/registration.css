@@ -1,13 +1,13 @@
 .su_main {
   width: 100%;
   height: calc(100vh - 11vh - 15vh);
-  margin-top: 80px;
+  margin-top: 11vh;
 }
 
 .su_container {
   width: 100%;
   height: 100%;
-  padding-top: 100px;
+  padding-top: 5%;
 }
 
 .sign_up_card {
