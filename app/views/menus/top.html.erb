@@ -2,14 +2,24 @@
   <section class="container01">
     <div class="background01">
       <%= image_tag 'image1.jpeg', alt:"トップイメージ"%>
-      <div class="over_lay01"></div>
     </div>
   </section>
 
   <section class="container02">
     <div class="background02">
-      <div class="concept_message">
-        ここにコンセプトメッセージが入ります
+      <div class="concept_messages">
+        <div class="concept_title">
+          <p>concept</p>
+          <p>食材は</p>
+          <p>腐りかけが</p>
+          <p>一番美味しい</p>
+        </div>
+        <div class="concept_message">
+          <p>平日は仕事が忙しいので、週末にまとめ買いした食</p>
+          <p>材を新鮮なうちには使用せず、期限ギリギリまで熟</p>
+          <p>成させることで、他では味わうことのできないコク</p>
+          <p>のある味わいを実現しています。</p>
+        <div>
       </div>
       <div class="concept_img">
         <%= image_tag 'image2.jpeg', alt: "コンセプト画像"%>
@@ -19,7 +29,7 @@
 
   <section class="container03">
     <span class="menu">MENU</span>
-    <p class="comment">近所のスーパーから買ってきた肉や野菜。<br>シェフ自ら現地に出向き、<br>厳選した食材を使用しております。</p>
+    <p class="comment">近所のスーパーから買ってきた肉や野菜。<br>シェフ自ら現地に出向き、厳選した食材を使用しております。</p>
     <figure class="menu_image_boxes">
       <div class="img_box">
         <%= image_tag 'image3.jpeg', alt: "FOODの画像" %>
@@ -37,7 +47,17 @@
   </section>
 
   <section class="container04">
-    <div class="theater_explain">ここにシアターの説明が入ります</div>
+    <div class="theater_left">
+      <div class="theater_title">
+        <p>theater</p>
+        <p>WEEKEND CINEMA</p>
+      </div>
+      <div class="theater_explain">
+        <p>毎週金曜日、土曜日には150インチの大画面で映画を楽しめるシアターも利用可能です。<span class="super">※要予約</span><br>
+          ご利用いただけるお客様には、ウェルカムドリンクとパーティーメニューのご用意をさせていた<br>
+          だきます。10人まで利用可能ですので、ご家族やご友人との楽しいひとときをお過ごしください。</p>
+      </div>
+    </div>
     <div class="theater_img">
       <%= image_tag 'image6.jpeg', alt: "シアターの画像" %>
     </div>
@@ -45,10 +65,11 @@
 
   <section class="container05">
     <div class="container05_left">
-      <p>LOBORA cafe</p>
-      <br>
-      <p>LOBORA cafeは、2022年1月に看護師の専門学校入学試験に落ちた店主が、失意の中立ち上げたカフェです。東京駅のすぐ隣に位置する当店では、名物であるもち米リゾットや丸焦げ餃子をはじめ、多くのフードメニューを取り揃えております。また、自慢のコーヒーは近所のスーパーから直接取り寄せた本格インスタントコーヒーとなっております。通勤・通学やお買い物のついでにぜひお立ち寄りください。</p>
-      <br>
+      <span>&nbsp;LOBORA cafe</span>
+      <p>LOBORA cafeは、2022年1月に看護師の専門学校入学試験に落ちた店主が、失意の中立ち上げたカフェです。</p>
+      <p>東京駅のすぐ隣に位置する当店では、名物であるもち米リゾットや丸焦げ餃子をはじめ、多くのフードメニュー</p>
+      <p>を取り揃えております。また、自慢のコーヒーは近所のスーパーから直接取り寄せた本格インスタントコーヒー</p>
+      <p class="container05_left_message">となっております。通勤・通学やお買い物のついでにぜひお立ち寄りください。</p>
       <p>住所：東京都千代田区丸の内１丁目</p>
       <p>営業時間：11:00-21:00 不定休</p>
       <p>メールアドレス：lobora@mail.com</p>
