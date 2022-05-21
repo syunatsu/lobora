@@ -68,39 +68,69 @@ header {
   .header_home {
     color: white;
     text-decoration: none;
+    transition: all 0.3s;
   }
   /*ここからサインイン時*/
   .header_food {
     color: white;
     text-decoration: none;
+    transition: all 0.3s;
   }
 
   .header_dolce {
     color: white;
     text-decoration: none;
+    transition: all 0.3s;
   }
 
   .header_drink {
     color: white;
     text-decoration: none;
+    transition: all 0.3s;
   }
 
   .header_newmenu {
     color: white;
     text-decoration: none;
     margin-right: 80px;
+    transition: all 0.3s;
   }
 
   .header_signout {
     color: white;
     text-decoration: none;
     margin-right: 50px;
+    transition: all 0.3s;
   }
   /*ここからホバー*/
-  
+  .header_home:hover {
+    font-size: 1.1rem;
+    color: rgb(214, 214, 214);
+  }
+  .header_food:hover {
+    font-size: 1.1rem;
+    color: rgb(214, 214, 214);
+  }
+  .header_dolce:hover {
+    font-size: 1.1rem;
+    color: rgb(214, 214, 214);
+  }
+  .header_drink:hover {
+    font-size: 1.1rem;
+    color: rgb(214, 214, 214);
+  }
+  .header_newmenu:hover {
+    font-size: 1.1rem;
+    color: rgb(214, 214, 214);
+  }
+  .header_signout:hover {
+    font-size: 1.1rem;
+    color: rgb(214, 214, 214);
+  }
   /*ここまでホバー*/
   /*ここまでサインイン時*/
-
+  
+  /*ここからサインアウト時*/
   .right_menus2 {
     width: 100%;
     height: 100%;
@@ -122,13 +152,26 @@ header {
     color: white;
     margin-right: 100px;
     text-decoration: none;
+    transition: all 0.3s;
   }
 
   .sign_in {
     color: white;
     margin-right: 60px;
     text-decoration: none;
+    transition: all 0.3s;
   }
+  /*ここからホバー*/
+  .sign_up:hover {
+    font-size: 1.1rem;
+    color: rgb(214, 214, 214);
+  }
+  .sign_in:hover {
+    font-size: 1.1rem;
+    color: rgb(214, 214, 214);
+  }
+  /*ここまでホバー*/
+  /*ここまでサインアウト時*/
 /* ここまでヘッダー */
 
 /* ここからフッター */
