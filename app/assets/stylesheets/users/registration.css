@@ -41,6 +41,7 @@
   border: 1px solid #ccc;
   border-bottom: 5px solid gray;
   box-shadow: 0 3px 3px rgb(30, 30, 30);
+  transition: all 0.2s;
 }
 
 .su_submit:hover {
