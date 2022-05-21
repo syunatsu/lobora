@@ -1,12 +1,6 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 .su_main {
   width: 100%;
-  height: calc(100vh - 80px - 100px);
+  height: calc(100vh - 11vh - 15vh);
   margin-top: 80px;
 }
 
@@ -44,6 +38,17 @@
 
 .su_submit {
   width: 50%;
-  border-radius: 30px;
   border: 1px solid #ccc;
+  border-bottom: 5px solid gray;
+  box-shadow: 0 3px 3px rgb(30, 30, 30);
+}
+
+.su_submit:hover {
+  margin-top: 2px;
+  border-bottom:1px solid gray;
+}
+
+.su_submit:active {
+  margin-top: 3px;
+  border-bottom: none;
 }
