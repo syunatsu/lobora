@@ -33,19 +33,19 @@
     <figure class="menu_image_boxes">
       <div class="img_title_box">
         <div class="img_box">
-          <%= image_tag 'image3.jpeg', alt: "FOODの画像" %>
+          <%= link_to (image_tag 'image3.jpeg', alt: "FOODの画像"), {controller: 'menus', action: 'index', name: 'food'} %>
         </div>
         <%= link_to 'FOOD', {controller: 'menus', action: 'index', name: 'food'}, class: 'top_food' %>
       </div>
       <div class="img_title_box">
         <div class="img_box">
-          <%= image_tag 'image4.jpeg', alt: "DOLCEの画像" %>
+          <%= link_to (image_tag 'image4.jpeg', alt: "DOLCEの画像"), {controller: 'menus', action: 'index', name: 'dolce'} %> 
         </div>
         <%= link_to 'DOLCE', {controller: 'menus', action: 'index', name: 'dolce'}, class: 'top_dolce' %>
       </div>
       <div class="img_title_box">
         <div class="img_box">
-          <%= image_tag 'image5.jpeg', alt: "DRINKの画像" %>
+          <%= link_to (image_tag 'image5.jpeg', alt: "DRINKの画像"), {controller: 'menus', action: 'index', name: 'drink'} %>
         </div>
         <%= link_to 'DRINK', {controller: 'menus', action: 'index', name: 'drink'}, class: 'top_drink' %>
       </div>
