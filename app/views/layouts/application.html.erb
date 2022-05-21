@@ -27,7 +27,7 @@
               <li><%= link_to 'FOOD', {controller: 'menus', action: 'index', name: 'food'}, class: 'header_food' %></li>
               <li><%= link_to 'DOLCE', {controller: 'menus', action: 'index', name: 'dolce'}, class: 'header_dolce' %></li>
               <li><%= link_to 'DRINK', {controller: 'menus', action: 'index', name: 'drink'}, class: 'header_drink' %></li>
-              <li><%= link_to 'NEW RECIPE', new_menu_path, class: 'header_newmenu' %></li>
+              <li><span class="header_newmenu">NEW RECIPE</span></li>
               <li><%= link_to 'SIGN OUT', destroy_user_session_path, method: :delete, class: 'header_signout' %> </li>
             </ul>
           </div>
