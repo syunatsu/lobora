@@ -52,48 +52,56 @@
       letter-spacing: 0.05em;
 
     }
-     .concept_title p:nth-child(1){
-       color: white;
-       font-size: 1.1rem;
-       text-align: right;
-       margin-bottom: 7%;
-     }
+    .concept_title p:nth-child(1){
+      color: white;
+      font-size: 1.1rem;
+      text-align: right;
+      margin-bottom: 7%;
+    }
 
-     .concept_title p:not(:first-child) {
-       color: white;
-       font-size: 3rem;
-       text-align: right;
-       line-height: 110%;
-     }
+    .concept_title p:not(:first-child) {
+      color: white;
+      font-size: 3rem;
+      text-align: right;
+      line-height: 110%;
+    }
 
-     .concept_title p:last-child {
+    .concept_title p:last-child {
       margin-bottom: 36%;
-     }
+    }
 
-     .concept_message {
-       color: white;
-       font-size: 0.9rem;
-       letter-spacing: 0.05em;
-       line-height: 130%;
-     }
+    .concept_message {
+      color: white;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      line-height: 130%;
+    }
 
-     .concept_message p:not(:nth-child(4)){
-        text-align: right;
-     }
+    .concept_message p:not(:nth-child(4)){
+      text-align: right;
+    }
  
-     .concept_img {
-       height: 82%;
-       width: 55%;
-       position: absolute;
-       top: 9%;
-       left: 58%;
-     }
+    .concept_img {
+      height: 82%;
+      width: 55%;
+      position: absolute;
+      top: 9%;
+      left: 58%;
+      overflow: hidden;
+    }
  
-     .concept_img img {
-       height: 100%;
-       width: 100%;
-       object-fit: cover;
-     }
+    .concept_img img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transition: all 1s;
+    }
+
+    .concept_img img:hover {
+      transform: scale(1.2);
+      filter:brightness(70%);
+      
+    }
  /* ここまでcontainer02 */
  
  /* ここからcontainer03 */
@@ -136,6 +144,7 @@
    .img_box {
      width: 33.3%;
      height: 100%;
+     overflow:hidden;
    }
  
      .img_box img {
@@ -143,6 +152,7 @@
        height: 100%;
        object-fit: cover;
        margin-bottom: 3%;
+       transition: all 1s;
      }
  
      .top_food {
@@ -165,6 +175,11 @@
       color: #000;
       margin-left: 5%;
      }
+
+     .img_box img:hover {
+      transform: scale(1.1);
+      filter:brightness(70%);
+     }
  /* ここまでcontainer03 */
  
  /* ここからcontainer04 */
@@ -185,6 +200,7 @@
      top: 35%;
      left:0%;
      z-index: 1;
+     transition: all 0.3s;
    }
 
    .theater_title p:nth-child(1) {
@@ -209,7 +225,7 @@
 
    span.super {
      vertical-align: super;
-     font-size: 0.5rem;
+     font-size: 0.3rem;
    }
  
    .theater_img {
@@ -224,6 +240,10 @@
      width: 100%;
      height: 100%;
      object-fit: cover;
+   }
+
+   .theater_left:hover {
+    background-color: rgb(145, 145, 145);
    }
  /* ここまでcontainer04 */
  
