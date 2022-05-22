@@ -36,12 +36,30 @@
   z-index: -1;
 }
 
-.drink01 p {
+.drink01_explain {
   color: #fff;
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
+}
+
+.drink01_explain h2 {
+  font-size: 3rem;
+  font-weight: 200;
+  letter-spacing: 0.05em;
+  text-align: center;
+  margin-bottom: 15%;
+}
+
+.drink01_explain p {
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+  line-height: 130%;
+}
+
+.drink01_explain p:nth-child(3) {
+  text-align: center;
 }
 /* ここまでdrink01 */
 
@@ -58,9 +76,12 @@
 }
 
 .drink03 h2 {
-  font-size: 2rem;
+  font-size: 3.5rem;
+  font-weight: 200;
+  text-align: center;
+  letter-spacing: 0.03em;
   margin-bottom: 5%;
-  color: #fff;
+  color: #000;
 }
 
 .drink_recommended01 {
@@ -157,11 +178,12 @@
 }
 
 .drink04 h2 {
-  font-size: 2rem;
-  margin-bottom: 5%;
+  font-size: 3.5rem;
+  font-weight: 200;
   text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 5%;
   color: #000;
-
 }
 
 .drink_menus {
