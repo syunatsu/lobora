@@ -23,7 +23,7 @@
         <% if user_signed_in? %>
           <div class="right_menus1">
             <ul>
-              <li><%= link_to 'HOME', root_path, class: 'header_home' %></li>
+              <li><%= link_to 'HOME', root_path, class: 'header_home', data: {turbolinks: false} %></li>
               <li><%= link_to 'FOOD', {controller: 'menus', action: 'index', name: 'food'}, class: 'header_food' %></li>
               <li><%= link_to 'DOLCE', {controller: 'menus', action: 'index', name: 'dolce'}, class: 'header_dolce' %></li>
               <li><%= link_to 'DRINK', {controller: 'menus', action: 'index', name: 'drink'}, class: 'header_drink' %></li>
@@ -48,20 +48,20 @@
       <div class="footer_empty"></div>
       <div class="footer_body">
         <div class="footer_left">
-          <span>&nbsp;Store info</span><br><br>
-          <p>&nbsp;&nbsp;住所：東京都千代田区丸の内１丁目</p>
-          <p>&nbsp;&nbsp;営業時間：11:00-21:00</p>
+          <span>&nbsp;&nbsp;Store info</span><br><br>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;住所：東京都千代田区丸の内１丁目</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;営業時間：11:00-21:00</p>
           <p>不定休</p>
         </div>
         <div class="footer_center">
-          <span>&nbsp;Phone&mail</span><br><br>
-          <p>&nbsp;&nbsp;電話番号：03-1234-5678</p>
-          <p>&nbsp;&nbsp;メール：lobora@mail.com</p>
+          <span>&nbsp;&nbsp;Phone&mail</span><br><br>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;電話番号：03-1234-5678</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;メール：lobora@mail.com</p>
         </div>
         <div class="footer_right">
-          <span>&nbsp;SNS</span><br><br>
-          <p>&nbsp;&nbsp;Youtube</p>
-          <p>&nbsp;&nbsp;Instagram</p>
+          <span>&nbsp;&nbsp;SNS</span><br><br>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;Youtube</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;Instagram</p>
         </div>
       </div>
     </footer>

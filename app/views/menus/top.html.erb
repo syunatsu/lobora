@@ -1,50 +1,54 @@
 <main class="index_main">
   <section class="container01">
     <div class="background01">
-      <%= image_tag 'image1.jpeg', alt:"トップイメージ"%>
+      <%= image_tag 'image1.jpeg', alt:"トップイメージ" %>
     </div>
   </section>
 
   <section class="container02">
-    <div class="background02">
-      <div class="concept_messages">
-        <div class="concept_title">
-          <p>concept</p>
+    <div class="background02"></div>
+    <div class="concept_messages">
+      <div class="concept_title">
+        <p class="concept_title1">concept</p>
+        <div class="concept_title2">
           <p>食材は</p>
           <p>腐りかけが</p>
-          <p>一番美味しい</p>
+          <p class= "last">一番美味しい</p>
         </div>
-        <div class="concept_message">
-          <p>平日は仕事が忙しいので、週末にまとめ買いした食</p>
-          <p>材を新鮮なうちには使用せず、期限ギリギリまで熟</p>
-          <p>成させることで、他では味わうことができないコク</p>
-          <p>のある味わいを実現しています。</p>
-        <div>
       </div>
-      <div class="concept_img">
-        <%= image_tag 'image2.jpeg', alt: "コンセプト画像"%>
+      <div class="concept_message">
+        <p>平日は仕事が忙しいので、週末にまとめ買いした食</p>
+        <p>材を新鮮なうちには使用せず、期限ギリギリまで熟</p>
+        <p>成させることで、他では味わうことができないコク</p>
+        <p>のある味わいを実現しています。</p>
       </div>
+    </div>
+    <div class="concept_img">
+      <%= image_tag 'image2.jpeg', alt: "コンセプト画像"%>
     </div>
   </section>
 
   <section class="container03">
-    <span class="menu">MENU</span>
-    <p class="comment">近所のスーパーで買ってきた肉や野菜。<br>シェフ自ら現地に出向き、厳選した食材を使用しております。</p>
+    <div class="container03_border"></div>
+    <div class="container03_title">
+      <span class="menu">MENU</span>
+      <p class="comment">近所のスーパーで買ってきた肉や野菜。<br>シェフ自ら現地に出向き、厳選した食材を使用しております。</p>
+    </div>
     <figure class="menu_image_boxes">
       <div class="img_title_box">
-        <div class="img_box">
+        <div class="img_box box1">
           <%= link_to (image_tag 'image3.jpeg', alt: "FOODの画像"), {controller: 'menus', action: 'index', name: 'food'} %>
         </div>
         <%= link_to 'FOOD', {controller: 'menus', action: 'index', name: 'food'}, class: 'top_food' %>
       </div>
       <div class="img_title_box">
-        <div class="img_box">
+        <div class="img_box box2">
           <%= link_to (image_tag 'image4.jpeg', alt: "DOLCEの画像"), {controller: 'menus', action: 'index', name: 'dolce'} %> 
         </div>
         <%= link_to 'DOLCE', {controller: 'menus', action: 'index', name: 'dolce'}, class: 'top_dolce' %>
       </div>
       <div class="img_title_box">
-        <div class="img_box">
+        <div class="img_box box3">
           <%= link_to (image_tag 'image5.jpeg', alt: "DRINKの画像"), {controller: 'menus', action: 'index', name: 'drink'} %>
         </div>
         <%= link_to 'DRINK', {controller: 'menus', action: 'index', name: 'drink'}, class: 'top_drink' %>
@@ -70,14 +74,15 @@
   </section>
 
   <section class="container05">
+    <div class="container05_border"></div>
     <div class="container05_left">
-      <span>&nbsp;LOBORA cafe</span>
+      <span>&nbsp;&nbsp;LOBORA cafe</span>
       <p>LOBORA cafeは、2022年1月に看護師の専門学校入学試験に落ちた店主が、失意の中立ち上げたカフェです。</p>
       <p>東京駅のすぐ隣に位置する当店では、名物であるもち米リゾットや丸焦げ餃子をはじめ、多くのフードメニュー</p>
       <p>を取り揃えております。また、自慢のコーヒーは近所のスーパーから直接取り寄せた本格インスタントコーヒー</p>
       <p class="container05_left_message">となっております。通勤・通学やお買い物のついでにぜひお立ち寄りください。</p>
       <p>住所：東京都千代田区丸の内１丁目</p>
-      <p>営業時間：11:00-21:00 不定休</p>
+      <p>営業時間：11:00-21:00 &nbsp;&nbsp;不定休</p>
       <p>メールアドレス：lobora@mail.com</p>
     </div>
     <div class="container05_right">

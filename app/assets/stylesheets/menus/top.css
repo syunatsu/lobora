@@ -9,12 +9,21 @@ margin-top: 11vh;
 width: 100%;
 height: 89vh;
 background-color: rgb(65, 80, 72);
-margin-bottom: 200px;
+margin-bottom: 10%;
 }
 
 .background01 {
 width: 100%;
 height: 95%;
+opacity: 0;
+overflow: hidden;
+}
+
+.background01.active {
+  width: 100%;
+  height: 95%;
+  opacity: 1;
+  transition: all 6s;
 }
 
 .background01 img {
@@ -23,50 +32,72 @@ height: 100%;
 background-position: center;
 background-size: cover;
 background-repeat: no-repeat;
+transform: scale(1.5);
+}
+
+.background01.active > img {
+  transform: scale(1.0);
+  transition: all 4s;
 }
 /* ここまでcontainer01 */
 
 /* ここからcontainer02 */
 .container02 {
-height: 500px;
-max-height: 500px;
-width: 100%; 
-margin-bottom: 150px;
+height: 55vh;
+min-height: 500px;
+width: 100%;
+margin-bottom: 6%;
+position: relative;
 }
 
 .background02 {
-width: 60%;
-height: 52vh;
+width: 1px;
+height: 100%;
 background-color: rgb(139, 112, 76);
-position: relative;
-display: flex;
+position: absolute;
+top: 0;
+left: 0;
+}
+
+.background02.active {
+  width: 65%;
+  transition: width 0.7s;
 }
 
 .concept_messages {
-margin-top: 4%;
-margin-left: 25%;
+  height: 80%;
+  position: absolute;
+  top: 5%;
+  left: 13%;
+  transform: translate(0, 300px);
+  opacity: 0;
 }
 
+.concept_messages.active {
+  transform: translate(0, 0);
+  opacity: 1;
+  transition: transform 1s, opacity 0.7s;
+}
 
 .concept_title {
 letter-spacing: 0.05em;
-
-}
-.concept_title p:nth-child(1){
-color: white;
-font-size: 1.1rem;
-text-align: right;
-margin-bottom: 7%;
 }
 
-.concept_title p:not(:first-child) {
+.concept_title1{
+  color: white;
+  font-size: 1.1rem;
+  text-align: right;
+  margin-bottom: 7%;
+}
+
+.concept_title2 {
 color: white;
 font-size: 3rem;
 text-align: right;
 line-height: 110%;
 }
 
-.concept_title p:last-child {
+.concept_title2 .last {
 margin-bottom: 36%;
 }
 
@@ -82,12 +113,18 @@ text-align: right;
 }
 
 .concept_img {
-height: 82%;
-width: 55%;
+height: 90%;
+width: 35%;
 position: absolute;
-top: 9%;
-left: 58%;
+top: 5%;
+left: 35%; 
 overflow: hidden;
+opacity: 0;
+}
+
+.concept_img.active {
+  opacity: 1;
+  transition: opacity 1s; 
 }
 
 .concept_img img {
@@ -108,153 +145,261 @@ filter:brightness(70%);
 .container03 {
 width: 80%;
 height: 80vh;
-margin: 0  auto 150px;
-border-top: 1px solid gray;
+min-height: 700px;
+margin: 0  auto 8%;
 position: relative;
+overflow: hidden;
+}
+
+.container03_border {
+  width: 100%;
+  height: 1px;
+  margin: 0 auto;
+  border-top: 1px solid gray;
+  opacity: 0;
+  transform: translateX(-100%);
+  position: absolute;
+  top: 3%;
+  left: 0;
+  z-index: -1;
+}
+
+.container03_border.active {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: all 1.2s;
 }
 
 .container03 .menu {
-display: inline-block;
-padding: 0 10px;
-position: absolute;
-top: -3%;
-left: 50%;
-transform: translateX(-50%);
-background-color: white;
-font-size: 2.5rem;
-letter-spacing: 0.06em;
+  opacity: 0;
+  display: inline-block;
+  padding: 0 10px;
+  position: absolute;
+  z-index: 1;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  font-size: 2.5rem;
+  letter-spacing: 0.06em;
+}
+
+.container03 .menu.active {
+  opacity: 1;
+  transition: all 0.6s;
 }
 
 .container03 .comment {
-text-align: center;
-margin: 40px 0;
-font-size: 0.9rem;
-letter-spacing: 0.01em;
-line-height: 130%;
+  opacity: 0;
+  text-align: center;
+  margin: 4% 0 2% 0;
+  font-size: 0.9rem;
+  letter-spacing: 0.01em;
+  line-height: 130%;
+}
+
+.container03 .comment.active {
+  opacity: 1;
+  transition: all 2s;
 }
 
 .menu_image_boxes {
-display: flex;
-gap: 2%;
-justify-content: space-between;
-width: 100%;
-height: 80%;
+  display: flex;
+  gap: 2%;
+  justify-content: space-between;
+  width: 100%;
+  height: 80%;
 }
 
 .img_title_box {
-width: 33.3%;
-height: 100%;
+  width: 33.3%;
+  height: 100%;
 }
 
 .img_box {
   width: 100%;
   height: 95%;
-  overflow:hidden;
+  overflow: hidden;
   transition: all 1s; 
   margin-bottom: 3%;;
 }
 
+.box1 {
+  transform: translateY(100%);
+  opacity: 0;
+}
+.box1.active {
+  transform: translateY(0%);
+  opacity: 1;
+  transition: transform 0.7s, opacity 1.2s;
+}
+
+.box2 {
+  transform: translateY(100%);
+  opacity: 0;
+}
+.box2.active {
+  transform: translateY(0%);
+  opacity: 1;
+  transition: transform 0.8s, opacity 1.3s;
+  transition-delay: 0.07s;
+}
+
+.box3 {
+  transform: translateY(100%);
+  opacity: 0;
+}
+.box3.active {
+  transform: translateY(0%);
+  opacity: 1;
+  transition: transform 1s, opacity 1.4s;
+  transition-delay: 0.14s;
+}
+
 .img_box img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-margin: 0 auto;
-transition: all 1s;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0 auto;
+  transition: all 1s;
 }
 
 .top_food {
-font-size: 1.7rem;
-text-decoration: none;
-color: #000;
-margin-left: 5%;
+  font-size: 1.7rem;
+  text-decoration: none;
+  color: #000;
+  margin-left: 5%;
+  transition: all 0.3s;
 }
 
 .top_dolce {
-font-size: 1.7rem;
-text-decoration: none;
-color: #000;
-margin-left: 5%;
+  font-size: 1.7rem;
+  text-decoration: none;
+  color: #000;
+  margin-left: 5%;
+  transition: all 0.3s;
 }
 
 .top_drink {
-font-size: 1.7rem;
-text-decoration: none;
-color: #000;
-margin-left: 5%;
+  font-size: 1.7rem;
+  text-decoration: none;
+  color: #000;
+  margin-left: 5%;
+  transition: all 0.3s;
+}
+
+.top_food:hover {
+  font-size: 1.9rem;
+  color: rgb(80, 80, 80);
+}
+
+.top_dolce:hover {
+  font-size: 1.9rem;
+  color: rgb(80, 80, 80);
+}
+.top_drink:hover {
+  font-size: 1.9rem;
+  color: rgb(80, 80, 80);
 }
 
 .img_box:hover {
-transform: scale(0.97);
+  transform: scale(0.97);
 }
 
 .img_box img:hover {
-transform: scale(1.15);
-filter:brightness(70%);
+  transform: scale(1.15);
+  filter:brightness(70%);
 }
 /* ここまでcontainer03 */
 
 /* ここからcontainer04 */
 .container04 {
-width: 80%;
-height: 500px;
-max-height: 500px;
-margin: 0 auto 150px;
-position: relative;
+  width: 80%;
+  height: 50vh;
+  min-height: 500px;
+  max-height: 500px;
+  margin: 0 auto 150px;
+  position: relative;
 }
 
 .theater_left {
-width: 40%;
-height: 60%;
-color: white;
-background-color: gray;
-position: absolute;
-top: 35%;
-left:0%;
-z-index: 1;
-transition: all 0.3s;
+  width: 40%;
+  height: 60%;
+  color: white;
+  background-color: gray;
+  position: absolute;
+  top: 35%;
+  left:0%;
+  z-index: 1;
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+.theater_left.active {
+  background-color: rgb(196, 196, 196);
+  color: black;
+  opacity: 1;
+  transition: background-color 4s, color 4s, opacity 2s;
 }
 
 .theater_title p:nth-child(1) {
-color: white;
-font-size: 1.1rem;
-margin: 2% 0 4% 3%;
+  font-size: 1.1rem;
+  margin: 2% 0 4% 3%;
 }
 
 .theater_title p:nth-child(2) {
-color: white;
-font-size: 3rem;
-margin: 0 0 20% 3%;
+  font-size: 3rem;
+  margin: 0 0 20% 3%;
 }
 
 .theater_explain {
-color: white;
-font-size: 0.8rem;
-letter-spacing: 0.02em;
-line-height: 130%;
-margin-left: 3%;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  line-height: 130%;
+  margin-left: 3%;
 }
 
 span.super {
-vertical-align: super;
-font-size: 0.3rem;
+  vertical-align: super;
+  font-size: 0.3rem;
 }
 
 .theater_img {
-height: 90%;
-width: 70%;
-position: absolute;
-right: 0;
-bottom: 10;
+  height: 90%;
+  width: 70%;
+  position: absolute;
+  right: 0;
+  bottom: 10;
+  overflow: hidden;
+  transition: all 1s;
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.theater_img.active {
+  opacity: 1;
+  transform: translateY(0%);
+  transition: transform 0.7s, opacity 1.2s;
 }
 
 .theater_img img {
-width: 100%;
-height: 100%;
-object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+transition: all 1s
 }
 
 .theater_left:hover {
-background-color: rgb(145, 145, 145);
+  background-color: rgb(145, 145, 145);
+}
+
+.theater_img:hover {
+  transform: scale(0.97);
+}
+
+.theater_img img:hover {
+  transform: scale(1.15);
+  filter: brightness(70%);
 }
 /* ここまでcontainer04 */
 
@@ -262,11 +407,31 @@ background-color: rgb(145, 145, 145);
 .container05 {
 width: 80%;
 height: 50vh;
+min-height: 500px;
 margin: 0 auto;
 padding-top: 2%;
-border-top: 1px solid gray;
 display: flex;
 justify-content: space-between;
+position: relative;
+overflow: hidden;
+}
+
+.container05_border {
+  width: 100%;
+  height: 1px;
+  margin: 0 auto;
+  border-top: 1px solid gray;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.container05_border.active1 {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: all 1.2s;
 }
 
 .container05_left {
