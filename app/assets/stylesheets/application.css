@@ -41,8 +41,61 @@ header {
 }
 
   .header_left {
-    padding: 10px 0 0 20px;
+    width: 30%;
   }
+
+  .header_span1 {
+    display: inline-block;
+    font-size: 1.8rem;
+    margin: 3% 0 0 3%;
+    letter-spacing: 0.03em;
+  }
+
+  .header_span2 {
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 3% 0 0 12%;
+    letter-spacing: 0.03em;
+  }
+/*ここからアニメーション------------------------------------*/
+.header_left_span1 {
+  animation:logo 1500ms infinite;
+}
+.header_left_span2 {
+  animation:logo 1500ms infinite 0.2s;
+}
+.header_left_span3 {
+  animation:logo 1500ms infinite 0.4s;
+}
+.header_left_span4 {
+  animation:logo 1500ms infinite 0.6s;
+}
+.header_left_span5 {
+  animation:logo 1500ms infinite 0.8s;
+}
+.header_left_span6 {
+  animation: logo 1500ms infinite 1s;
+}
+
+@keyframes logo {
+  0% {
+    color: #fff;
+  }
+  25% {
+    color: #e8dd7d;
+  }
+  50% {
+    color: #558c8c;
+  }
+  75% {
+    color: #82204a;
+  }
+  100% {
+    color: #eff7ff;
+  }
+}
+
+/*ここまでアニメーション-------------------------------------*/
 
   .header_right {
     padding-right: 20px;

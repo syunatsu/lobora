@@ -7,6 +7,7 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/8b70b053ab.js" crossorigin="anonymous"></script>
     <%# googleフォント %>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +18,9 @@
   <body>
     <header>
       <div class="header_left">
-      <h1>LOBORA<br> cafe</h1>
+        <h1>
+        <span class="header_span1"><span class="header_left_span1">L</span><span class="header_left_span2">O</span><span class="header_left_span3">B</span><span class="header_left_span4">O</span><span class="header_left_span5">L</span><span class="header_left_span6">A</span></span><br><span class="header_span2">cafe&nbsp;&nbsp;<i class="fa-solid fa-mug-hot"></i></span>
+        </h1>
       </div>
       <div class="header_right">
         <% if user_signed_in? %>
@@ -60,8 +63,8 @@
         </div>
         <div class="footer_right">
           <span>&nbsp;&nbsp;SNS</span><br><br>
-          <p>&nbsp;&nbsp;&nbsp;&nbsp;Youtube</p>
-          <p>&nbsp;&nbsp;&nbsp;&nbsp;Instagram</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-brands fa-youtube-square">&nbsp;</i>Youtube</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-brands fa-instagram">&nbsp;</i>Instagram</p>
         </div>
       </div>
     </footer>
