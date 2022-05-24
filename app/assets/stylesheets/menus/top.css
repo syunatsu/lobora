@@ -477,7 +477,7 @@ html.modal_set {
   overflow: hidden;
 }
 
-.container06 {
+.modal_page {
   display: none;
   width: 100%;
   height: 100vh;
