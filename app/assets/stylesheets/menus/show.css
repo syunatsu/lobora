@@ -1,41 +1,64 @@
 .show_container {
   width: 100%;
-  height: calc(100vh - 80px - 100px);
-  margin-top: 80px;
-  background: linear-gradient(#fff, rgb(175, 175, 175));
+  height: calc(100vh - 11vh - 15vh);
+  min-height: 600px;
+  margin-top: 11vh;
+  background-color: rgb(246, 246, 246);
+}
+
+.section_wrapper {
+  height: 100%;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
 }
 
 .show01 {
   width: 100%;
-  height: 55%;
+  height: 100%;
   margin-bottom: 2%;
+  display: flex;
+  flex-direction: column;
 }
 
 .show_menu_name {
   display: inline-block;
-  margin-left: 30px;
-  padding-top: 30px;
   font-size: 1.8rem;
+  margin: 3% 0 5% 0;
 }
 
 .show_img_wrapper {
-  width: 30%;
+  width: 100%;
   height: 100%;
-  margin: 0 auto;
+  margin-bottom: 3%;
+  position: relative;
 }
 
 .show_img_wrapper img {
-  width: 90%;
-  height: 90%;
-  margin-left: 5%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .show02 {
-  width: 80%;
-  height: 35%;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+}
+
+.show_menu_recipe {
+  width: 70%;
+  height: 38%;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 1%;
+  background-color: #fff;
+  margin: 12% 0 3% 15%;
 }
 
 .show02 span {
@@ -44,43 +67,47 @@
   border-bottom: 2px solid black;
 }
 
-.show_menu_recipe {
-  width: 35%;
-  height: 100%;
-  border: 1px solid gray;
-  border-radius: 10px;
-  padding: 1%;
-  margin-right: 2%;
-  background-color: #fff;
+.show02_for_flex {
+  display: flex;
+  align-items: flex-end;
+  height: 50%;
+  width: 100%;
 }
 
 .show_menu_how_to {
-  width: 50%;
-  height: 100%;
+  width: 70%;
+  height: 90%;
   border: 1px solid gray;
   border-radius: 10px;
   padding: 1%;
   background-color: #fff;
+  margin-left: 15%; 
+  margin-bottom: 3%;
 }
 
 .show_buttons {
-  height: 100%;
+  height: 25%;
   width: 10%;
   display: flex;
-  align-items: flex-end;
-  margin-left: 2%;
+  flex-direction: column;
+  margin-left: 4%;
+  margin-bottom: 3%;
 }
 
 .edit_btn {
+  width: 60px;
+  text-align: center;
   background-color: rgb(75, 75, 253);
   color: white;
   padding: 7px 10px;
   border-radius: 5px;
-  margin-right: 10%;
+  margin-bottom: 15%;
   cursor: pointer;
 }
 
 .delete_btn {
+  width: 60px;
+  text-align: center;
   background-color: rgb(252, 90, 90);
   color: white;
   padding: 7px 10px;

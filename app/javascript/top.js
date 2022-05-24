@@ -2,7 +2,7 @@ function popup (){
   const modalOpen = document.querySelector(".header_newmenu");
   const modalClose = document.querySelector(".show_form_close");
   const modal = document.querySelector(".modal_page");
-  const modalBack = document.querySelector(".show_form_wrapper")
+  const modalBack = document.querySelector(".show_form_wrapper");
   const backGround = document.querySelector("html");
 
   modalOpen.addEventListener("click", () => {

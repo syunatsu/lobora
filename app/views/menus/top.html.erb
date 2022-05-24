@@ -37,21 +37,21 @@
     <figure class="menu_image_boxes">
       <div class="img_title_box">
         <div class="img_box box1">
-          <%= link_to (image_tag 'image3.jpeg', alt: "FOODの画像"), {controller: 'menus', action: 'index', name: 'food'} %>
+          <%= link_to (image_tag 'image3.jpeg', alt: "FOODの画像"), {controller: 'menus', action: 'index', name: 'food'}, data:{turbolinks: false} %>
         </div>
-        <%= link_to 'FOOD', {controller: 'menus', action: 'index', name: 'food'}, class: 'top_food' %>
+        <%= link_to 'FOOD', {controller: 'menus', action: 'index', name: 'food'}, class: 'top_food', data:{turbolinks: false} %>
       </div>
       <div class="img_title_box">
         <div class="img_box box2">
-          <%= link_to (image_tag 'image4.jpeg', alt: "DOLCEの画像"), {controller: 'menus', action: 'index', name: 'dolce'} %> 
+          <%= link_to (image_tag 'image4.jpeg', alt: "DOLCEの画像"), {controller: 'menus', action: 'index', name: 'dolce'}, data:{turbolinks: false} %> 
         </div>
-        <%= link_to 'DOLCE', {controller: 'menus', action: 'index', name: 'dolce'}, class: 'top_dolce' %>
+        <%= link_to 'DOLCE', {controller: 'menus', action: 'index', name: 'dolce'}, class: 'top_dolce', data:{turbolinks: false} %>
       </div>
       <div class="img_title_box">
         <div class="img_box box3">
-          <%= link_to (image_tag 'image5.jpeg', alt: "DRINKの画像"), {controller: 'menus', action: 'index', name: 'drink'} %>
+          <%= link_to (image_tag 'image5.jpeg', alt: "DRINKの画像"), {controller: 'menus', action: 'index', name: 'drink'}, data:{turbolinks: false} %>
         </div>
-        <%= link_to 'DRINK', {controller: 'menus', action: 'index', name: 'drink'}, class: 'top_drink' %>
+        <%= link_to 'DRINK', {controller: 'menus', action: 'index', name: 'drink'}, class: 'top_drink', data:{turbolinks: false} %>
       </div>
     </figure>
   </section>
