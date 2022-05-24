@@ -47,6 +47,12 @@
     
     <%= yield %>
 
+    <%# back_to_top %>
+    <%= link_to '#', class: "back_to_top", data: {turbolinks: false} do %>
+      <i class="fa-solid fa-angles-up"></i>
+    <% end %>
+    <%# back_to_top %>
+
     <footer>
       <div class="footer_empty"></div>
       <div class="footer_body">
