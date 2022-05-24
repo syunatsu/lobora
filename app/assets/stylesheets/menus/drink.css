@@ -63,11 +63,11 @@
 }
 /* ここまでdrink01 */
 
-/* ここからdrink03 */
-.drink03 {
+/* ここからdrink02 */
+.drink02 {
   width: 100%;
   height: auto;
-  background-color: rgb(176, 215, 134);
+  background-color: rgb(191, 217, 163);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,8 +75,8 @@
   padding-bottom: 8%;
 }
 
-.drink03 h2 {
-  font-size: 3.5rem;
+.drink02 h2 {
+  font-size: 3rem;
   font-weight: 200;
   text-align: center;
   letter-spacing: 0.03em;
@@ -160,10 +160,10 @@
 .drink_recommended_explain02 li:first-child{
   font-size: 1.5rem;
 }
-/* ここまでdrink03 */
+/* ここまでdrink02 */
 
-/* ここからdrink04 */
-.drink04 {
+/* ここからdrink03 */
+.drink03 {
   width: 100%;
   height: auto;
   padding-top: 5%;
@@ -171,14 +171,14 @@
   background-color: rgb(245, 244, 236);
 }
 
-.drink04_wrapper {
+.drink03_wrapper {
   width: 83%;
   height: 100%;
   margin: 0 auto;
 }
 
-.drink04 h2 {
-  font-size: 3.5rem;
+.drink03 h2 {
+  font-size: 3rem;
   font-weight: 200;
   text-align: center;
   letter-spacing: 0.03em;
@@ -189,25 +189,21 @@
 .drink_menus {
   width: 100%;
   height: auto;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-row-gap: 8%;
 }
 
 .drink_menu {
-  width: 33.3%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin-bottom: 2%;
 }
 
 .drink_menu_img {
   width: 90%;
   height: 100%;
-  margin-bottom: 2%;
+  margin-bottom: 4%;
   margin-right: auto;
   margin-left: auto;
   overflow: hidden;
@@ -229,15 +225,29 @@
 }
 
 .drink_menu_name {
-  margin-bottom: 30%;
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  transition: all 0.2s;
 }
-/* ここまでdrink04 */
 
-/* ここからdrink05 */
-.drink05 {
+.drink_menu_name:hover {
+  font-size: 1.13rem;
+  color:rgb(145, 145, 145);
+}
+
+.drink_menu_name a {
+  text-decoration: none;
+  color: black;
+  font-weight: 800;
+}
+/* ここまでdrink03 */
+
+/* ここからdrink04 */
+.drink04 {
   display: none;
   width: 100%;
   height: 100vh;
+  min-height: 800px;
   background-color: rgb(150, 150, 150);
   position: fixed;
   top:0;
@@ -245,7 +255,7 @@
   z-index: 10;
 }
 
-.drink05 span:nth-child(1) {
+.drink04 span:nth-child(1) {
   position: absolute;
   top: 12%;
   left: 1.5%;
@@ -253,13 +263,12 @@
   font-size: 6rem;
 }
 
-.drink05  .modal_second_span{
+.drink04 .modal_second_span{
   position: absolute;
   top: 22%;
   left: 5.5%;
   display: inline-block;
   font-size: 4rem;
-
 }
 
 .show_form_box {
@@ -331,4 +340,4 @@
   color: white;
   cursor: pointer;
 }
-/* ここまでdrink05*/
+/* ここまでdrink04*/

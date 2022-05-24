@@ -8,7 +8,9 @@
 .food01 {
   width: 100%;
   height: 100vh;
+  background-color: rgb(65, 80, 72);
   position: relative;
+  z-index: -3;
 }
 
 .food_img_wrapper01 {
@@ -18,6 +20,11 @@
   top: 0;
   left: 0;
   z-index: -2;
+  opacity: 0;
+}
+.food_img_wrapper01.active {
+  opacity: 1;
+  transition: all 3s;
 }
 
 .food_img_wrapper01 img {
@@ -34,6 +41,14 @@
   width: 100%;
   height: 100%;
   z-index: -1;
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.food_overlay01.active {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: transform 0.7s, opacity 0.7s;
+  transition-delay: 0.6s;
 }
 
 .food01_explain {
@@ -42,20 +57,39 @@
   top: 30%;
   left: 50%;
   transform: translateX(-50%);
+  overflow: hidden;
 }
 
-.food01_explain h2 {
+.food_h2_01 {
   font-size: 3rem;
   font-weight: 200;
   letter-spacing: 0.05em;
   text-align: center;
   margin-bottom: 15%;
+  opacity: 0;
+  transform: translateY(100%);
+  overflow: hidden;
+}
+.food_h2_01.active {
+  opacity: 1;
+  transform: translateY(0%);
+  transition: transform 0.7s, opacity 0.7s;
+  transition-delay: 1.5s;
 }
 
-.food01_explain p {
+.food01_sentence {
   font-size: 0.9rem;
   letter-spacing: 0.03em;
   line-height: 130%;
+  opacity: 0;
+  transform: translateY(100%);
+  overflow: hidden;
+}
+.food01_sentence.active {
+  opacity: 1;
+  transform: translateY(0%);
+  transition: transform 0.7s, opacity 0.7s;
+  transition-delay: 1.6s;
 }
 /* ここまでfood01 */
 
@@ -65,26 +99,132 @@
   height: auto;
   background-color: rgb(160, 125, 143);
   padding-top: 6%;
-  padding-bottom: 85%;
-  position: relative;
+  padding-bottom: 8%;
 }
 
 .food02 h2 {
   font-size: 3rem;
   font-weight: 200;
   text-align: center;
-  letter-spacing: 0.03em;
-  margin-bottom: 15%;
+  letter-spacing: 0px;
+  margin-bottom: 7%;
   color: #fff;
+  overflow: hidden;
+}
+/*下から出てくるアニメーション-----------------------------------*/
+.food02_span1 {
+  opacity: 0;
+}
+.food02_span2 {
+  opacity: 0;
+}
+.food02_span3 {
+  opacity: 0;
+}
+.food02_span4 {
+  opacity: 0;
+}
+.food02_span5 {
+  opacity: 0;
+}
+.food02_span6 {
+  opacity: 0;
+}
+.food02_span7 {
+  opacity: 0;
+}
+.food02_span8 {
+  opacity: 0;
+}
+.food02_span9 {
+  opacity: 0;
+}
+.food02_span10 {
+  opacity: 0;
+}
+.food02_span11 {
+  opacity: 0;
+}
+
+.food02_span1.active{
+  display: inline-block;
+  animation: display 0.5s forwards;
+}
+.food02_span2.active{
+  display: inline-block;
+  animation: display 0.5s 0.1s forwards;
+}
+.food02_span3.active{
+  display: inline-block;
+  animation: display 0.5s 0.2s forwards;
+}
+.food02_span4.active{
+  display: inline-block;
+  animation: display 0.5s 0.3s forwards;
+}
+.food02_span5.active{
+  display: inline-block;
+  animation: display 0.5s 0.4s forwards;
+}
+.food02_span6.active{
+  display: inline-block;
+  animation: display 0.5s 0.5s forwards;
+}
+.food02_span7.active{
+  display: inline-block;
+  animation: display 0.5s 0.6s forwards;
+}
+.food02_span8.active{
+  display: inline-block;
+  animation: display 0.5s 0.7s forwards;
+}
+.food02_span9.active{
+  display: inline-block;
+  animation: display 0.5s 0.8s forwards;
+}
+.food02_span10.active{
+  display: inline-block;
+  animation: display 0.5s 0.9s forwards;
+}
+.food02_span11.active{
+  display: inline-block;
+  animation: display 0.5s 1s forwards;
+}
+
+@keyframes display {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+/*-ここまで下から出てくるアニメーション----------------------------*/
+.food02_wrapper1 {
+  width: 100%;
+  height: 80vh;
+  min-height: 600px;
+  position: relative;
+  margin-bottom: 2%;
+  overflow: hidden;
 }
 
 .food_img_wrapper02 {
   width: 46vw;
   height: 70vh;
   position: absolute;
-  top: 12%;
+  top: 0%;
   left: 6%;
   overflow: hidden;
+  opacity: 0;
+  transform: translateY(50%);
+}
+.food_img_wrapper02.active {
+  opacity: 1;
+  transform: translateY(0%);
+  transition: opacity 1s, transform 0.7s;
 }
 
 .food_img_wrapper02 img {
@@ -103,21 +243,44 @@
   width: 47vw;
   height: 70vh;
   position: absolute;
-  top: 15%;
+  top: 5%;
   left: 46%;
+  opacity: 0;
+  transform: translateY(100%);
+}
+.food_special_explain01.active {
+  opacity: 1;
+  transform: translateY(0%);
+  transition: opacity 1s, transform 0.7s;
+  transition-delay: 0.1s;
 }
 
 .food_special_explain01 ul {
   margin: 12% 0 0 28%;
 }
 
+.food02_wrapper2 {
+  width: 100%;
+  height: 80vh;
+  min-height: 600px;
+  position: relative;
+  overflow: hidden;
+}
+
 .food_img_wrapper03 {
   width: 46vw;
   height: 70vh;
   position: absolute;
-  top: 56%;
+  top: 8%;
   left: 6%;
   overflow: hidden;
+  opacity: 0;
+  transform: translateY(50%);
+}
+.food_img_wrapper03.active {
+  opacity: 1;
+  transform: translateY(0%);
+  transition: opacity 1s, transform 0.7s;
 }
 
 .food_img_wrapper03 img {
@@ -136,8 +299,16 @@
   width: 47vw;
   height: 70vh;
   position: absolute;
-  top: 59%;
+  top: 13%;
   left: 46%;
+  opacity: 0;
+  transform: translateY(100%);
+}
+.food_special_explain02.active {
+  opacity: 1;
+  transform: translateY(0%);
+  transition: opacity 1s, transform 0.7s;
+  transition-delay: 0.1s;
 }
 
 .food_special_explain02 ul {
@@ -155,6 +326,7 @@
   align-items: center;
   padding-top: 4%;
   padding-bottom: 8%;
+  overflow: hidden;
 }
 
 .food03 h2 {
@@ -164,7 +336,100 @@
   letter-spacing: 0.03em;
   margin-bottom: 5%;
   color: #fff;
+  overflow: hidden;
 }
+
+/*下から出てくるアニメーション-----------------------------------*/
+.food03_span1 {
+  opacity: 0;
+}
+.food03_span2 {
+  opacity: 0;
+}
+.food03_span3 {
+  opacity: 0;
+}
+.food03_span4 {
+  opacity: 0;
+}
+.food03_span5 {
+  opacity: 0;
+}
+.food03_span6 {
+  opacity: 0;
+}
+.food03_span7 {
+  opacity: 0;
+}
+.food03_span8 {
+  opacity: 0;
+}
+.food03_span9 {
+  opacity: 0;
+}
+.food03_span10 {
+  opacity: 0;
+}
+.food03_span11 {
+  opacity: 0;
+}
+
+.food03_span1.active{
+  display: inline-block;
+  animation: display 0.5s forwards;
+}
+.food03_span2.active{
+  display: inline-block;
+  animation: display 0.5s 0.1s forwards;
+}
+.food03_span3.active{
+  display: inline-block;
+  animation: display 0.5s 0.2s forwards;
+}
+.food03_span4.active{
+  display: inline-block;
+  animation: display 0.5s 0.3s forwards;
+}
+.food03_span5.active{
+  display: inline-block;
+  animation: display 0.5s 0.4s forwards;
+}
+.food03_span6.active{
+  display: inline-block;
+  animation: display 0.5s 0.5s forwards;
+}
+.food03_span7.active{
+  display: inline-block;
+  animation: display 0.5s 0.6s forwards;
+}
+.food03_span8.active{
+  display: inline-block;
+  animation: display 0.5s 0.7s forwards;
+}
+.food03_span9.active{
+  display: inline-block;
+  animation: display 0.5s 0.8s forwards;
+}
+.food03_span10.active{
+  display: inline-block;
+  animation: display 0.5s 0.9s forwards;
+}
+.food03_span11.active{
+  display: inline-block;
+  animation: display 0.5s 1s forwards;
+}
+
+@keyframes display {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+/*-ここまで下から出てくるアニメーション----------------------------*/
 
 .food_recommended01 {
   width: 60%;
@@ -173,6 +438,13 @@
   margin-bottom: 2%;
   display: flex;
   justify-content: space-between;
+  opacity: 0;
+  transform: translateY(100%);
+}
+.food_recommended01.active {
+  opacity: 1;
+  transform: translateY(0%);
+  transition: opacity 1s, transform 0.7s;
 }
 
 .food_img_wrapper04 {
@@ -218,6 +490,13 @@
   background-color: #fff;
   display: flex;
   justify-content: space-between;
+  opacity: 0;
+  transform: translateY(100%);
+}
+.food_recommended02.active {
+  opacity: 1;
+  transform: translateY(0%);
+  transition: opacity 1s, transform 0.7s;
 }
 
 .food_img_wrapper05 {
@@ -262,13 +541,14 @@
 .food04 {
   width: 100%;
   height: auto;
+  min-height: 100vh;
   padding-top: 5%;
   padding-bottom: 5%;
   background-color: rgb(245, 244, 236);
 }
 
 .food04_container {
-  width: 83%;
+  width: 84%;
   height: 100%;
   margin: 0 auto;
 }
@@ -280,35 +560,109 @@
   letter-spacing: 0.03em;
   margin-bottom: 5%;
   color: #000;
-
+  overflow: hidden;
 }
+/*下から出てくるアニメーション-----------------------------------*/
+.food04_span1 {
+  opacity: 0;
+}
+.food04_span2 {
+  opacity: 0;
+}
+.food04_span3 {
+  opacity: 0;
+}
+.food04_span4 {
+  opacity: 0;
+}
+.food04_span5 {
+  opacity: 0;
+}
+.food04_span6 {
+  opacity: 0;
+}
+.food04_span7 {
+  opacity: 0;
+}
+.food04_span8 {
+  opacity: 0;
+}
+
+.food04_span1.active{
+  display: inline-block;
+  animation: display 0.5s forwards;
+}
+.food04_span2.active{
+  display: inline-block;
+  animation: display 0.5s 0.1s forwards;
+}
+.food04_span3.active{
+  display: inline-block;
+  animation: display 0.5s 0.2s forwards;
+}
+.food04_span4.active{
+  display: inline-block;
+  animation: display 0.5s 0.3s forwards;
+}
+.food04_span5.active{
+  display: inline-block;
+  animation: display 0.5s 0.4s forwards;
+}
+.food04_span6.active{
+  display: inline-block;
+  animation: display 0.5s 0.5s forwards;
+}
+.food04_span7.active{
+  display: inline-block;
+  animation: display 0.5s 0.6s forwards;
+}
+.food04_span8.active{
+  display: inline-block;
+  animation: display 0.5s 0.7s forwards;
+}
+
+@keyframes display {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+/*-ここまで下から出てくるアニメーション----------------------------*/
 
 .food_menus {
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-row-gap: 8%;
+  overflow-x: hidden;
 }
 
 .food_menu {
-  width: 33.3%;
-  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin-bottom: 2%;
+  overflow: hidden;
 }
 
 .food_menu_img {
   width: 90%;
   height: 100%;
-  margin-bottom: 2%;
+  margin-bottom: 4%;
   margin-right: auto;
   margin-left: auto;
   overflow: hidden;
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.food_menu_img.active {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: opacity 1s, transform 1s;
 }
 
 .food_menu_img img {
@@ -326,12 +680,20 @@
   margin-left: 5%;
 }
 
-.food_menu_name{
+.food_menu_name {
+  font-size: 1.1rem;
   margin-bottom: 40px;
+  transition: all 0.2s;
+}
+
+.food_menu_name:hover {
+  font-size: 1.13rem;
+  color:rgb(145, 145, 145);
 }
 
 .food_menu_name a {
   text-decoration: none;
+  color: black;
   font-weight: 800;
 }
 /* ここまでfood04 */
@@ -341,6 +703,7 @@
   display: none;
   width: 100%;
   height: 100vh;
+  min-height: 800px;
   background-color: rgb(150, 150, 150);
   position: fixed;
   top:0;
