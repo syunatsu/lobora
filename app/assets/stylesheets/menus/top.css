@@ -1,22 +1,22 @@
 .index_main {
-width: 100%;
-height: calc(100% - 11vh - 15vh);
-margin-top: 11vh;
+  width: 100%;
+  height: calc(100% - 11vh - 15vh);
+  margin-top: 11vh;
 }
 
 /* container01 */
 .container01 {
-width: 100%;
-height: 89vh;
-background-color: rgb(65, 80, 72);
-margin-bottom: 10%;
+  width: 100%;
+  height: 89vh;
+  background-color: rgb(65, 80, 72);
+  margin-bottom: 10%;
 }
 
 .background01 {
-width: 100%;
-height: 95%;
-opacity: 0;
-overflow: hidden;
+  width: 100%;
+  height: 95%;
+  opacity: 0;
+  overflow: hidden;
 }
 
 .background01.active {
@@ -27,12 +27,12 @@ overflow: hidden;
 }
 
 .background01 img {
-width: 100%;
-height: 100%;
-background-position: center;
-background-size: cover;
-background-repeat: no-repeat;
-transform: scale(1.5);
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: scale(1.5);
 }
 
 .background01.active > img {
@@ -43,20 +43,20 @@ transform: scale(1.5);
 
 /* ここからcontainer02 */
 .container02 {
-height: 55vh;
-min-height: 500px;
-width: 100%;
-margin-bottom: 6%;
-position: relative;
+  height: 55vh;
+  min-height: 500px;
+  width: 100%;
+  margin-bottom: 6%;
+  position: relative;
 }
 
 .background02 {
-width: 1px;
-height: 100%;
-background-color: rgb(139, 112, 76);
-position: absolute;
-top: 0;
-left: 0;
+  width: 1px;
+  height: 100%;
+  background-color: rgb(139, 112, 76);
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .background02.active {
@@ -81,7 +81,7 @@ left: 0;
 }
 
 .concept_title {
-letter-spacing: 0.05em;
+  letter-spacing: 0.05em;
 }
 
 .concept_title1{
@@ -92,35 +92,35 @@ letter-spacing: 0.05em;
 }
 
 .concept_title2 {
-color: white;
-font-size: 3rem;
-text-align: right;
-line-height: 130%;
+  color: white;
+  font-size: 3rem;
+  text-align: right;
+  line-height: 130%;
 }
 
 .concept_title2 .last {
-margin-bottom: 37%;
+  margin-bottom: 37%;
 }
 
 .concept_message {
-color: white;
-font-size: 0.9rem;
-letter-spacing: 0.05em;
-line-height: 130%;
+  color: white;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  line-height: 130%;
 }
 
 .concept_message p:not(:nth-child(4)){
-text-align: right;
+  text-align: right;
 }
 
 .concept_img {
-height: 90%;
-width: 35%;
-position: absolute;
-top: 5%;
-left: 35%; 
-overflow: hidden;
-opacity: 0;
+  height: 90%;
+  width: 35%;
+  position: absolute;
+  top: 5%;
+  left: 35%; 
+  overflow: hidden;
+  opacity: 0;
 }
 
 .concept_img.active {
@@ -129,27 +129,27 @@ opacity: 0;
 }
 
 .concept_img img {
-height: 100%;
-width: 100%;
-object-fit: cover;
-transition: all 1s;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 1s;
 }
 
 .concept_img img:hover {
-transform: scale(1.2);
-filter:brightness(70%);
+  transform: scale(1.2);
+  filter:brightness(70%);
 
 }
 /* ここまでcontainer02 */
 
 /* ここからcontainer03 */
 .container03 {
-width: 80%;
-height: 80vh;
-min-height: 700px;
-margin: 0  auto 8%;
-position: relative;
-overflow: hidden;
+  width: 80%;
+  height: 80vh;
+  min-height: 700px;
+  margin: 0  auto 8%;
+  position: relative;
+  overflow: hidden;
 }
 
 .container03_border {
@@ -408,15 +408,15 @@ transition: all 1s
 
 /* ここからcontainer05 */
 .container05 {
-width: 80%;
-height: 50vh;
-min-height: 500px;
-margin: 0 auto;
-padding-top: 2%;
-display: flex;
-justify-content: space-between;
-position: relative;
-overflow: hidden;
+  width: 80%;
+  height: 50vh;
+  min-height: 500px;
+  margin: 0 auto;
+  padding-top: 2%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
 }
 
 .container05_border {
@@ -438,74 +438,76 @@ overflow: hidden;
 }
 
 .container05_left {
-width: 50%;
-height: 100%;
+  width: 50%;
+  height: 100%;
 }
 
 .container05_left span {
-display: inline-block;
-font-size: 1.1rem;
-border-left: 5px solid gray;
-margin-bottom: 7%;
+  display: inline-block;
+  font-size: 1.1rem;
+  border-left: 5px solid gray;
+  margin-bottom: 7%;
 }
 
 .container05_left p {
-font-size: 0.9rem;
-letter-spacing: 0.01em;
-line-height: 130%;
-text-align: left;
+  font-size: 0.9rem;
+  letter-spacing: 0.01em;
+  line-height: 130%;
+  text-align: left;
 }
 
 .container05_left_message {
-margin-bottom: 28%;
+  margin-bottom: 28%;
 }
 
 .container05_right {
-width: 45%;
-height: 90%;
+  width: 45%;
+  height: 90%;
 }
 
 .container05_right img {
-width: 100%;
-height: 100%;
-object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 /* ここまでcontainer05 */
 
 /* ここからcontainer06 */
+html.modal_set {
+  overflow: hidden;
+}
+
 .container06 {
   display: none;
   width: 100%;
   height: 100vh;
-  background-color: rgb(150, 150, 150);
+  background-color: rgba(128, 128, 128, 0.97);
   position: fixed;
   top:0;
   left:0;
   z-index: 10;
+  overflow: auto;
 }
 
-.container06 span:nth-child(1) {
-  position: absolute;
-  top: 12%;
-  left: 1.5%;
-  display: inline-block;
-  font-size: 6rem;
-}
-
-.container06  .modal_second_span{
-  position: absolute;
-  top: 22%;
-  left: 5.5%;
-  display: inline-block;
-  font-size: 4rem;
-
+.show_form_wrapper {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
 }
 
 .show_form_box {
-  width: 40%;
+  width: 30%;
+  height: 100%;
   margin: 0 auto;
   animation-name: popup;
   animation-duration: 0.8s;
+}
+
+.show_form_title {
+  font-size: 1.7rem;
+  text-align: center;
+  margin-bottom: 5%;
 }
 
 @keyframes popup {
@@ -516,6 +518,11 @@ object-fit: cover;
   to {
     opacity: 1;
   }
+}
+
+.show_form {
+  width: 100%;
+  height: 60%;
 }
 
 .show_label {

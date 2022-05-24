@@ -2,18 +2,23 @@ function popup (){
   const modalOpen = document.querySelector(".header_newmenu");
   const modalClose = document.querySelector(".show_form_close");
   const modal = document.querySelector(".container06");
+  const modalBack = document.querySelector(".show_form_wrapper")
+  const backGround = document.querySelector("html");
 
   modalOpen.addEventListener("click", () => {
     modal.style.display = "block";
+    backGround.classList.add("modal_set");
   });
 
   modalClose.addEventListener("click", () => {
     modal.style.display = "none";
+    backGround.classList.remove("modal_set");
   });
 
   document.addEventListener("click", (e) => {
-    if (e.target == modal) {
+    if (e.target == modalBack) {
       modal.style.display = "none";
+      backGround.classList.remove("modal_set");
     }
   });
 }
