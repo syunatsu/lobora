@@ -1,14 +1,16 @@
 .drink_container {
   width: 100%;
   height: auto;
-  margin-top: 80px;
+  margin-top: 11vh;
 }
 
 /* ここからdrink01 */
 .drink01 {
   width: 100%;
   height: 100vh;
+  background-color: rgb(65, 80, 72);
   position: relative;
+  z-index: -3;
 }
 
 .drink_img_wrapper01 {
@@ -18,6 +20,11 @@
   top: 0;
   left: 0;
   z-index: -2;
+  opacity: 0;
+}
+.drink_img_wrapper01.active {
+  opacity: 1;
+  transition: all 3s;
 }
 
 .drink_img_wrapper01 img {
@@ -34,6 +41,14 @@
   width: 100%;
   height: 100%;
   z-index: -1;
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.drink_overlay01.active {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: transform 0.7s, opacity 0.7s;
+  transition-delay: 0.6s;
 }
 
 .drink01_explain {
@@ -42,23 +57,42 @@
   top: 30%;
   left: 50%;
   transform: translateX(-50%);
+  overflow: hidden;
 }
 
-.drink01_explain h2 {
+.drink_h2_01 {
   font-size: 3rem;
   font-weight: 200;
   letter-spacing: 0.05em;
   text-align: center;
   margin-bottom: 15%;
+  opacity: 0;
+  transform: translateY(100%);
+  overflow: hidden;
+}
+.drink_h2_01.active {
+  opacity: 1;
+  transform: translateY(0%);
+  transition: transform 0.7s, opacity 0.7s;
+  transition-delay: 1.5s;
 }
 
-.drink01_explain p {
+.drink01_sentence {
   font-size: 0.9rem;
   letter-spacing: 0.03em;
   line-height: 130%;
+  opacity: 0;
+  transform: translateY(100%);
+  overflow: hidden;
+}
+.drink01_sentence.active {
+  opacity: 1;
+  transform: translateY(0%);
+  transition: transform 0.7s, opacity 0.7s;
+  transition-delay: 1.6s;
 }
 
-.drink01_explain p:nth-child(3) {
+.drink01_sentence p:nth-child(2) {
   text-align: center;
 }
 /* ここまでdrink01 */
@@ -73,6 +107,7 @@
   align-items: center;
   padding-top: 4%;
   padding-bottom: 8%;
+  overflow: hidden;
 }
 
 .drink02 h2 {
@@ -82,7 +117,99 @@
   letter-spacing: 0.03em;
   margin-bottom: 5%;
   color: #000;
+  overflow: hidden;
 }
+/*下から出てくるアニメーション-----------------------------------*/
+.drink02_span1 {
+  opacity: 0;
+}
+.drink02_span2 {
+  opacity: 0;
+}
+.drink02_span3 {
+  opacity: 0;
+}
+.drink02_span4 {
+  opacity: 0;
+}
+.drink02_span5 {
+  opacity: 0;
+}
+.drink02_span6 {
+  opacity: 0;
+}
+.drink02_span7 {
+  opacity: 0;
+}
+.drink02_span8 {
+  opacity: 0;
+}
+.drink02_span9 {
+  opacity: 0;
+}
+.drink02_span10 {
+  opacity: 0;
+}
+.drink02_span11 {
+  opacity: 0;
+}
+
+.drink02_span1.active{
+  display: inline-block;
+  animation: display 0.5s forwards;
+}
+.drink02_span2.active{
+  display: inline-block;
+  animation: display 0.5s 0.1s forwards;
+}
+.drink02_span3.active{
+  display: inline-block;
+  animation: display 0.5s 0.2s forwards;
+}
+.drink02_span4.active{
+  display: inline-block;
+  animation: display 0.5s 0.3s forwards;
+}
+.drink02_span5.active{
+  display: inline-block;
+  animation: display 0.5s 0.4s forwards;
+}
+.drink02_span6.active{
+  display: inline-block;
+  animation: display 0.5s 0.5s forwards;
+}
+.drink02_span7.active{
+  display: inline-block;
+  animation: display 0.5s 0.6s forwards;
+}
+.drink02_span8.active{
+  display: inline-block;
+  animation: display 0.5s 0.7s forwards;
+}
+.drink02_span9.active{
+  display: inline-block;
+  animation: display 0.5s 0.8s forwards;
+}
+.drink02_span10.active{
+  display: inline-block;
+  animation: display 0.5s 0.9s forwards;
+}
+.drink02_span11.active{
+  display: inline-block;
+  animation: display 0.5s 1s forwards;
+}
+
+@keyframes display {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+/*-ここまで下から出てくるアニメーション----------------------------*/
 
 .drink_recommended01 {
   width: 60%;
@@ -91,6 +218,13 @@
   margin-bottom: 2%;
   display: flex;
   justify-content: space-between;
+  opacity: 0;
+  transform: translateY(100%);
+}
+.drink_recommended01.active {
+  opacity: 1;
+  transform: translateY(0%);
+  transition: opacity 1s, transform 0.7s;
 }
 
 .drink_img_wrapper04 {
@@ -99,12 +233,19 @@
   margin-left: 3%;
   margin-top: auto;
   margin-bottom: auto;
+  overflow: hidden;
 }
 
 .drink_img_wrapper04 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: all 1s;
+}
+
+.drink_img_wrapper04 img:hover {
+  transform: scale(1.2);
+  filter: brightness(70%);
 }
 
 .drink_recommended_explain01 {
@@ -129,6 +270,13 @@
   background-color: #fff;
   display: flex;
   justify-content: space-between;
+  opacity: 0;
+  transform: translateY(100%);
+}
+.drink_recommended02.active {
+  opacity: 1;
+  transform: translateY(0%);
+  transition: opacity 1s, transform 0.7s;
 }
 
 .drink_img_wrapper05 {
@@ -137,12 +285,19 @@
   margin-left: 3%;
   margin-top: auto;
   margin-bottom: auto;
+  overflow: hidden;
 }
 
 .drink_img_wrapper05 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: all 1s;
+}
+
+.drink_img_wrapper05 img:hover {
+  transform: scale(1.2);
+  filter: brightness(70%);
 }
 
 .drink_recommended_explain02 {
@@ -184,7 +339,85 @@
   letter-spacing: 0.03em;
   margin-bottom: 5%;
   color: #000;
+  overflow: hidden;
 }
+/*下から出てくるアニメーション-----------------------------------*/
+.drink03_span1 {
+  opacity: 0;
+}
+.drink03_span2 {
+  opacity: 0;
+}
+.drink03_span3 {
+  opacity: 0;
+}
+.drink03_span4 {
+  opacity: 0;
+}
+.drink03_span5 {
+  opacity: 0;
+}
+.drink03_span6 {
+  opacity: 0;
+}
+.drink03_span7 {
+  opacity: 0;
+}
+.drink03_span8 {
+  opacity: 0;
+}
+.drink03_span9 {
+  opacity: 0;
+}
+
+.drink03_span1.active{
+  display: inline-block;
+  animation: display 0.5s forwards;
+}
+.drink03_span2.active{
+  display: inline-block;
+  animation: display 0.5s 0.1s forwards;
+}
+.drink03_span3.active{
+  display: inline-block;
+  animation: display 0.5s 0.2s forwards;
+}
+.drink03_span4.active{
+  display: inline-block;
+  animation: display 0.5s 0.3s forwards;
+}
+.drink03_span5.active{
+  display: inline-block;
+  animation: display 0.5s 0.4s forwards;
+}
+.drink03_span6.active{
+  display: inline-block;
+  animation: display 0.5s 0.5s forwards;
+}
+.drink03_span7.active{
+  display: inline-block;
+  animation: display 0.5s 0.6s forwards;
+}
+.drink03_span8.active{
+  display: inline-block;
+  animation: display 0.5s 0.7s forwards;
+}
+.drink03_span9.active{
+  display: inline-block;
+  animation: display 0.5s 0.8s forwards;
+}
+
+@keyframes display {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+/*-ここまで下から出てくるアニメーション----------------------------*/
 
 .drink_menus {
   width: 100%;
@@ -192,12 +425,14 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-row-gap: 8%;
+  overflow-x: hidden;
 }
 
 .drink_menu {
   width: 100%;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .drink_menu_img {
@@ -207,6 +442,13 @@
   margin-right: auto;
   margin-left: auto;
   overflow: hidden;
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.drink_menu_img.active {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: opacity 1s, transform 1s;
 }
 
 .drink_menu_img img {

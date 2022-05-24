@@ -5,14 +5,18 @@
     </div>
     <div class="drink_overlay01"></div>
     <div class="drink01_explain">
-      <h2>DRINK</h2>
-      <p>オリジナルブレンドコーヒー、オーガニック紅茶、自家製ジンジャーエールなど</p>
-      <p>各種ドリンクを多数ご用意しております。</p>
+      <h2 class="drink_h2_01">DRINK</h2>
+      <div class="drink01_sentence">
+        <p>オリジナルブレンドコーヒー、オーガニック紅茶、自家製ジンジャーエールなど</p>
+        <p>各種ドリンクを多数ご用意しております。</p>
+      </div>
     </div>
   </section>
 
   <section class="drink02">
-    <h2>recommended</h2>
+    <h2>
+    <span class="drink02_span1">R</span><span class="drink02_span2">e</span><span class="drink02_span3">c</span><span class="drink02_span4">o</span><span class="drink02_span5">m</span><span class="drink02_span6">m</span><span class="drink02_span7">e</span><span class="drink02_span8">n</span><span class="drink02_span9">d</span><span class="drink02_span10">e</span><span class="drink02_span11">d</span>
+    </h2>
     <div class="drink_recommended01">
       <div class="drink_img_wrapper04">
         <%= image_tag 'image13.jpeg', alt: 'おすすめメニューの写真１' %>
@@ -42,7 +46,9 @@
 
   <section class="drink03">
     <div class="drink03_wrapper">
-      <h2>DRINK MENU</h2>
+      <h2>
+        <span class="drink03_span1">D</span><span class="drink03_span2">r</span><span class="drink03_span3">i</span><span class="drink03_span4">n</span><span class="drink03_span5">k</span><span class="drink03_span10">&nbsp;</span><span class="drink03_span6">M</span><span class="drink03_span7">e</span><span class="drink03_span8">n</span><span class="drink03_span9">u</span>
+      </h2>
       <div class="drink_menus">
         <% drinks.each do |drink| %>
           <div class="drink_menu">
@@ -80,7 +86,7 @@
         <%= f.file_field :image %>
         <%= f.submit 'SEND', class:"show_submit" %>
         <div class="show_form_buttons">
-          <%= link_to '◀︎ TOP', root_path, class: 'show_top' %>
+          <%= link_to '◀︎ TOP', root_path, class: 'show_top', data: {turbolinks: false} %>
           <span class="show_form_close">× CLOSE</span>
         </div>
       <% end %>

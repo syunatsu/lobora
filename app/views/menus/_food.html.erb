@@ -120,7 +120,7 @@
         <%= f.file_field :image %>
         <%= f.submit 'SEND', class:"show_submit" %>
         <div class="show_form_buttons">
-          <%= link_to '◀︎ TOP', root_path, class: 'show_top' %>
+          <%= link_to '◀︎ TOP', root_path, class: 'show_top', data: {turbolinks: false} %>
           <span class="show_form_close">× CLOSE</span>
         </div>
       <% end %>
