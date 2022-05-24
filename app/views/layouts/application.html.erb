@@ -19,14 +19,15 @@
     <header>
       <div class="header_left">
         <h1>
-        <span class="header_span1"><span class="header_left_span1">L</span><span class="header_left_span2">O</span><span class="header_left_span3">B</span><span class="header_left_span4">O</span><span class="header_left_span5">L</span><span class="header_left_span6">A</span></span><br><span class="header_span2">cafe&nbsp;&nbsp;<i class="fa-solid fa-mug-hot"></i></span>
+        <span class="header_span1"><span class="header_left_span1">L</span><span class="header_left_span2">O</span><span class="header_left_span3">B</span><span class="header_left_span4">O</span><span class="header_left_span5">L</span><span class="header_left_span6">A</span></span><br>
+        <span class="header_span2"><span class="header_left_span7">c</span><span class="header_left_span8">a</span><span class="header_left_span9">f</span><span class="header_left_span10">e</span>&nbsp;<i class="fa-solid fa-mug-hot"></i></span>
         </h1>
       </div>
       <div class="header_right">
         <% if user_signed_in? %>
           <div class="right_menus1">
             <ul>
-              <li><%= link_to 'HOME', root_path, class: 'header_home', data: {turbolinks: false} %></li>
+              <li><%= link_to 'HOME', root_path, class: 'header_home', data: {turbolinks: false} %>
               <li><%= link_to 'FOOD', {controller: 'menus', action: 'index', name: 'food'}, class: 'header_food', data: {turbolinks: false} %></li>
               <li><%= link_to 'DOLCE', {controller: 'menus', action: 'index', name: 'dolce'}, class: 'header_dolce', data: {turbolinks: false} %></li>
               <li><%= link_to 'DRINK', {controller: 'menus', action: 'index', name: 'drink'}, class: 'header_drink', data: {turbolinks: false} %></li>

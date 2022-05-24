@@ -76,7 +76,6 @@ header {
 .header_left_span6 {
   animation: logo 1500ms infinite 1s;
 }
-
 @keyframes logo {
   0% {
     color: #fff;
@@ -95,140 +94,207 @@ header {
   }
 }
 
+.header_left_span7 {
+  display: inline-block;
+  animation: logo2 1000ms
+}
+.header_left_span8 {
+  display: inline-block;
+  animation: logo2 1000ms 0.05s
+}
+.header_left_span9 {
+  display: inline-block;
+  animation: logo2 1000ms 0.1s
+}
+.header_left_span10 {
+  display: inline-block;
+  animation: logo2 1000ms 0.15s
+}
+@keyframes logo2 {
+  0%,100% {
+    top: 0;
+    transform: scale(1);
+  }
+  30% {
+    transform: translateY(-25%);
+  }
+  50% {
+    transform: scale(1);
+  }
+  90% {
+    top: 0;
+    transition: scale(1.2, 0.8);
+  }
+}
+
+.fa-mug-hot {
+  animation: logo3 3000ms;
+}
+@keyframes logo3 {
+  0% {
+    transform: translateY(-300%);
+  }
+  60% {
+    transform: translateY(0%);
+  }
+  80% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
 /*ここまでアニメーション-------------------------------------*/
 
-  .header_right {
-    padding-right: 20px;
-    height: 100%;
-    width: 50%;
-  }
+/*ここからヘッダーライト*/
+.header_right {
+  padding-right: 20px;
+  height: 100%;
+  width: 50%;
+}
 
-  .right_menus1 {
-    width: 100%;
-    height: 100%;
-  }
+.right_menus1 {
+  width: 100%;
+  height: 100%;
+}
 
-  .right_menus1 ul {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
+.right_menus1 ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
 
-  .right_menus1 ul li {
-    list-style: none;
-    margin-left: 50px;
-  }
+.right_menus1 ul li {
+  list-style: none;
+  margin-left: 50px;
+}
 
-  .header_home {
-    color: white;
-    text-decoration: none;
-    transition: all 0.3s;
-  }
-  /*ここからサインイン時*/
-  .header_food {
-    color: white;
-    text-decoration: none;
-    transition: all 0.3s;
-  }
+.header_home,.header_food,.header_dolce,.header_drink {
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s;
+  position: relative;
+} 
 
-  .header_dolce {
-    color: white;
-    text-decoration: none;
-    transition: all 0.3s;
-  }
+.header_newmenu {
+  color: white;
+  text-decoration: none;
+  margin-right: 80px;
+  transition: all 0.3s;
+  cursor: pointer;
+  position: relative;
+}
 
-  .header_drink {
-    color: white;
-    text-decoration: none;
-    transition: all 0.3s;
-  }
+.header_signout {
+  color: white;
+  text-decoration: none;
+  margin-right: 50px;
+  transition: all 0.3s;
+  position: relative;
+}
 
-  .header_newmenu {
-    color: white;
-    text-decoration: none;
-    margin-right: 80px;
-    transition: all 0.3s;
-    cursor: pointer;
-  }
+.header_home::before,
+.header_food::before,
+.header_dolce::before,
+.header_drink::before,
+.header_newmenu::before,
+.header_signout::before {
+  background: rgb(180, 180, 180);
+  content: '';
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  transform-origin: center top;
+  transform: scale(0, 1);
+  transition: transform 0.3s;
+}
 
-  .header_signout {
-    color: white;
-    text-decoration: none;
-    margin-right: 50px;
-    transition: all 0.3s;
-  }
-  /*ここからホバー*/
-  .header_home:hover {
-    font-size: 1.1rem;
-    color: rgb(214, 214, 214);
-  }
-  .header_food:hover {
-    font-size: 1.1rem;
-    color: rgb(214, 214, 214);
-  }
-  .header_dolce:hover {
-    font-size: 1.1rem;
-    color: rgb(214, 214, 214);
-  }
-  .header_drink:hover {
-    font-size: 1.1rem;
-    color: rgb(214, 214, 214);
-  }
-  .header_newmenu:hover {
-    font-size: 1.1rem;
-    color: rgb(214, 214, 214);
-  }
-  .header_signout:hover {
-    font-size: 1.1rem;
-    color: rgb(214, 214, 214);
-  }
-  /*ここまでホバー*/
-  /*ここまでサインイン時*/
-  
-  /*ここからサインアウト時*/
-  .right_menus2 {
-    width: 100%;
-    height: 100%;
-  }
+.header_home:hover,
+.header_food:hover,
+.header_dolce:hover,
+.header_drink:hover,
+.header_newmenu:hover,
+.header_signout:hover {
+  color: rgb(180, 180, 180);
+}
 
-  .right_menus2 ul {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
+.header_home:hover::before,
+.header_food:hover::before,
+.header_dolce:hover::before,
+.header_drink:hover::before,
+.header_drink:hover::before,
+.header_newmenu:hover::before,
+.header_signout:hover::before {
+  transform-origin: center top;
+  transform: scale(1, 1);
+}
+/*ここまでサインイン時*/
 
-  .right_menus2 ul li {
-    list-style: none;
-  }
+/*ここからサインアウト時*/
+.right_menus2 {
+  width: 100%;
+  height: 100%;
+}
 
-  .sign_up {
-    color: white;
-    margin-right: 100px;
-    text-decoration: none;
-    transition: all 0.3s;
-  }
+.right_menus2 ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
 
-  .sign_in {
-    color: white;
-    margin-right: 60px;
-    text-decoration: none;
-    transition: all 0.3s;
-  }
-  /*ここからホバー*/
-  .sign_up:hover {
-    font-size: 1.1rem;
-    color: rgb(214, 214, 214);
-  }
-  .sign_in:hover {
-    font-size: 1.1rem;
-    color: rgb(214, 214, 214);
-  }
-  /*ここまでホバー*/
-  /*ここまでサインアウト時*/
+.right_menus2 ul li {
+  list-style: none;
+}
+
+.sign_up {
+  color: white;
+  margin-right: 100px;
+  text-decoration: none;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.sign_in {
+  color: white;
+  margin-right: 60px;
+  text-decoration: none;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.sign_up::before,
+.sign_in::before {
+  background: rgb(180, 180, 180);
+  content: '';
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  transform-origin: center top;
+  transform: scale(0, 1);
+  transition: transform 0.3s;
+}
+.sign_up:hover,
+.sign_in:hover {
+  color: rgb(214, 214, 214);
+}
+
+.sign_up:hover::before,
+.sign_in:hover::before {
+  transform-origin: center top;
+  transform: scale(1, 1);
+}
+/*ここまでサインアウト時*/
+/* ここまでヘッダーライト */
 /* ここまでヘッダー */
 
 /* ここからフッター */
