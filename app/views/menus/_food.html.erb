@@ -87,10 +87,10 @@
         <% foods.each do |food| %>
           <div class="food_menu<% food.id %>">
             <div class="food_menu_img">
-              <%= link_to(image_tag(food.image), "/menus/#{food.id}/show") %>
+              <%= link_to(image_tag(food.image), "/menus/#{food.id}/show", data:{turbolinks: false}) %>
             </div>
             <div class="food_menu_contents">
-              <div class="food_menu_name"><%= link_to food.name, "/menus/#{food.id}/show", action: :show %></div>
+              <div class="food_menu_name"><%= link_to food.name, "/menus/#{food.id}/show", action: :show, data:{turbolinks: false} %></div>
               <div class="food_menu_price">￥<%= food.price %></div>
             </div>
           </div>

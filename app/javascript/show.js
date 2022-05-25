@@ -22,3 +22,13 @@ document.addEventListener("click", (e) => {
 }
 
 window.addEventListener('turbolinks:load', popup);
+
+/*show01*/
+$(function() {
+    $('.show_menu_name').addClass('active');
+    $('.show_img_wrapper').addClass('active');
+    $('.show_menu_recipe').addClass('active');
+    $('.show_menu_how_to').addClass('active');
+    $('.edit_btn').addClass('active');
+    $('.delete_btn').addClass('active');
+});
