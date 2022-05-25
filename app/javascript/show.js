@@ -1,7 +1,8 @@
 function popup (){
 const buttonOpen = document.querySelector(".edit_btn");
 const buttonClose = document.querySelector(".show_form_close");
-const modal = document.querySelector(".show03");
+const modal = document.querySelector(".modal_page");
+const modalBack = document.querySelector(".show_form_wrapper");
 
 buttonOpen.addEventListener("click", () => {
   //モーダルを開く
@@ -14,10 +15,20 @@ buttonClose.addEventListener("click", () => {
 });
 
 document.addEventListener("click", (e) => {
-  if (e.target == modal) {
+  if (e.target == modalBack) {
     modal.style.display = "none";
   }
 });
 }
 
 window.addEventListener('turbolinks:load', popup);
+
+/*show01*/
+$(function() {
+    $('.show_menu_name').addClass('active');
+    $('.show_img_wrapper').addClass('active');
+    $('.show_menu_recipe').addClass('active');
+    $('.show_menu_how_to').addClass('active');
+    $('.edit_btn').addClass('active');
+    $('.delete_btn').addClass('active');
+});

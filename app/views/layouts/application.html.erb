@@ -7,22 +7,31 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/8b70b053ab.js" crossorigin="anonymous"></script>
+    <%# googleフォント %>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <%# googleフォント %>
   </head>
 
   <body>
     <header>
       <div class="header_left">
-      <h1>LOBORA<br> cafe</h1>
+        <h1>
+        <span class="header_span1"><span class="header_left_span1">L</span><span class="header_left_span2">O</span><span class="header_left_span3">B</span><span class="header_left_span4">O</span><span class="header_left_span5">L</span><span class="header_left_span6">A</span></span><br>
+        <span class="header_span2"><span class="header_left_span7">c</span><span class="header_left_span8">a</span><span class="header_left_span9">f</span><span class="header_left_span10">e</span>&nbsp;<i class="fa-solid fa-mug-hot"></i></span>
+        </h1>
       </div>
       <div class="header_right">
         <% if user_signed_in? %>
           <div class="right_menus1">
             <ul>
-              <li><%= link_to 'HOME', root_path, class: 'header_home' %></li>
-              <li><%= link_to 'FOOD', {controller: 'menus', action: 'index', name: 'food'}, class: 'header_food' %></li>
-              <li><%= link_to 'DOLCE', {controller: 'menus', action: 'index', name: 'dolce'}, class: 'header_dolce' %></li>
-              <li><%= link_to 'DRINK', {controller: 'menus', action: 'index', name: 'drink'}, class: 'header_drink' %></li>
-              <li><%= link_to 'NEW RECIPE', new_menu_path, class: 'header_newmenu' %></li>
+              <li><%= link_to 'HOME', root_path, class: 'header_home', data: {turbolinks: false} %>
+              <li><%= link_to 'FOOD', {controller: 'menus', action: 'index', name: 'food'}, class: 'header_food', data: {turbolinks: false} %></li>
+              <li><%= link_to 'DOLCE', {controller: 'menus', action: 'index', name: 'dolce'}, class: 'header_dolce', data: {turbolinks: false} %></li>
+              <li><%= link_to 'DRINK', {controller: 'menus', action: 'index', name: 'drink'}, class: 'header_drink', data: {turbolinks: false} %></li>
+              <li><span class="header_newmenu">NEW RECIPE</span></li>
               <li><%= link_to 'SIGN OUT', destroy_user_session_path, method: :delete, class: 'header_signout' %> </li>
             </ul>
           </div>
@@ -39,24 +48,32 @@
     
     <%= yield %>
 
+    <%# back_to_top %>
+    <%= link_to '#', class: "back_to_top", data: {turbolinks: false} do %>
+      <i class="fa-solid fa-angles-up"></i>
+    <% end %>
+    <%# back_to_top %>
+
     <footer>
-      <div class="footer_empty"></div>
+      <div id="empty">
+        <div class="footer_empty"></div>
+      </div>
       <div class="footer_body">
         <div class="footer_left">
-          <span>&nbsp;Store info</span><br><br>
-          <p>&nbsp;&nbsp;住所：東京都千代田区丸の内１丁目</p>
-          <p>&nbsp;&nbsp;営業時間：11:00-21:00</p>
-          <p>&nbsp;不定休</p>
+          <span>&nbsp;&nbsp;Store info</span><br><br>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;住所：東京都千代田区丸の内１丁目</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;営業時間：11:00-21:00</p>
+          <p>不定休</p>
         </div>
         <div class="footer_center">
-          <span>&nbsp;Phone&mail</span><br><br>
-          <p>&nbsp;&nbsp;電話番号：03-1234-5678</p>
-          <p>&nbsp;&nbsp;メール：lobora@mail.com</p>
+          <span>&nbsp;&nbsp;Phone&mail</span><br><br>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;電話番号：03-1234-5678</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;メール：lobora@mail.com</p>
         </div>
         <div class="footer_right">
-          <span>&nbsp;SNS</span><br><br>
-          <p>&nbsp;&nbsp;Youtube</p>
-          <p>&nbsp;&nbsp;Instagram</p>
+          <span>&nbsp;&nbsp;SNS</span><br><br>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-brands fa-youtube-square">&nbsp;</i>Youtube</p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-brands fa-instagram">&nbsp;</i>Instagram</p>
         </div>
       </div>
     </footer>

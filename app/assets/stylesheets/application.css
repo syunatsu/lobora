@@ -15,18 +15,21 @@
  */
 
  body {
-   width: 100vw;
+   width: 99.2vw;
    height: auto;
  }
 
- /* ここからヘッダー */
 * {
   box-sizing: border-box;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-family: 'PT Serif', serif;
 }
 
+ /* ここからヘッダー */
 header {
   width: 100%;
   height: 11vh;
+  min-height: 90px;
   background-color: rgb(65, 80, 72);
   color: white;
   position: fixed;
@@ -38,158 +41,290 @@ header {
 }
 
   .header_left {
-    padding: 10px 0 0 20px;
+    width: 30%;
   }
 
-  .header_right {
-    padding-right: 20px;
-    height: 100%;
-    width: 50%;
+  .header_span1 {
+    display: inline-block;
+    font-size: 1.8rem;
+    margin: 3% 0 0 3%;
+    letter-spacing: 0.03em;
   }
 
-  .right_menus1 {
-    width: 100%;
-    height: 100%;
+  .header_span2 {
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 3% 0 0 12%;
+    letter-spacing: 0.03em;
   }
+/*ここからアニメーション------------------------------------*/
+.header_left_span1 {
+  animation:logo 1500ms infinite;
+}
+.header_left_span2 {
+  animation:logo 1500ms infinite 0.2s;
+}
+.header_left_span3 {
+  animation:logo 1500ms infinite 0.4s;
+}
+.header_left_span4 {
+  animation:logo 1500ms infinite 0.6s;
+}
+.header_left_span5 {
+  animation:logo 1500ms infinite 0.8s;
+}
+.header_left_span6 {
+  animation: logo 1500ms infinite 1s;
+}
+@keyframes logo {
+  0% {
+    color: #fff;
+  }
+  25% {
+    color: #e8dd7d;
+  }
+  50% {
+    color: #558c8c;
+  }
+  75% {
+    color: #82204a;
+  }
+  100% {
+    color: #eff7ff;
+  }
+}
 
-  .right_menus1 ul {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+.header_left_span7 {
+  display: inline-block;
+  animation: logo2 1000ms
+}
+.header_left_span8 {
+  display: inline-block;
+  animation: logo2 1000ms 0.05s
+}
+.header_left_span9 {
+  display: inline-block;
+  animation: logo2 1000ms 0.1s
+}
+.header_left_span10 {
+  display: inline-block;
+  animation: logo2 1000ms 0.15s
+}
+@keyframes logo2 {
+  0%,100% {
+    top: 0;
+    transform: scale(1);
   }
+  30% {
+    transform: translateY(-25%);
+  }
+  50% {
+    transform: scale(1);
+  }
+  90% {
+    top: 0;
+    transition: scale(1.2, 0.8);
+  }
+}
 
-  .right_menus1 ul li {
-    list-style: none;
-    margin-left: 50px;
+.fa-mug-hot {
+  animation: logo3 3000ms;
+}
+@keyframes logo3 {
+  0% {
+    transform: translateY(-300%);
   }
+  60% {
+    transform: translateY(0%);
+  }
+  80% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+/*ここまでアニメーション-------------------------------------*/
 
-  .header_home {
-    color: white;
-    text-decoration: none;
-    transition: all 0.3s;
-  }
-  /*ここからサインイン時*/
-  .header_food {
-    color: white;
-    text-decoration: none;
-    transition: all 0.3s;
-  }
+/*ここからヘッダーライト*/
+.header_right {
+  padding-right: 20px;
+  height: 100%;
+  width: 50%;
+}
 
-  .header_dolce {
-    color: white;
-    text-decoration: none;
-    transition: all 0.3s;
-  }
+.right_menus1 {
+  width: 100%;
+  height: 100%;
+}
 
-  .header_drink {
-    color: white;
-    text-decoration: none;
-    transition: all 0.3s;
-  }
+.right_menus1 ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
 
-  .header_newmenu {
-    color: white;
-    text-decoration: none;
-    margin-right: 80px;
-    transition: all 0.3s;
-  }
+.right_menus1 ul li {
+  list-style: none;
+  margin-left: 50px;
+}
 
-  .header_signout {
-    color: white;
-    text-decoration: none;
-    margin-right: 50px;
-    transition: all 0.3s;
-  }
-  /*ここからホバー*/
-  .header_home:hover {
-    font-size: 1.1rem;
-    color: rgb(214, 214, 214);
-  }
-  .header_food:hover {
-    font-size: 1.1rem;
-    color: rgb(214, 214, 214);
-  }
-  .header_dolce:hover {
-    font-size: 1.1rem;
-    color: rgb(214, 214, 214);
-  }
-  .header_drink:hover {
-    font-size: 1.1rem;
-    color: rgb(214, 214, 214);
-  }
-  .header_newmenu:hover {
-    font-size: 1.1rem;
-    color: rgb(214, 214, 214);
-  }
-  .header_signout:hover {
-    font-size: 1.1rem;
-    color: rgb(214, 214, 214);
-  }
-  /*ここまでホバー*/
-  /*ここまでサインイン時*/
-  
-  /*ここからサインアウト時*/
-  .right_menus2 {
-    width: 100%;
-    height: 100%;
-  }
+.header_home,.header_food,.header_dolce,.header_drink {
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s;
+  position: relative;
+} 
 
-  .right_menus2 ul {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
+.header_newmenu {
+  color: white;
+  text-decoration: none;
+  margin-right: 80px;
+  transition: all 0.3s;
+  cursor: pointer;
+  position: relative;
+}
 
-  .right_menus2 ul li {
-    list-style: none;
-  }
+.header_signout {
+  color: white;
+  text-decoration: none;
+  margin-right: 50px;
+  transition: all 0.3s;
+  position: relative;
+}
 
-  .sign_up {
-    color: white;
-    margin-right: 100px;
-    text-decoration: none;
-    transition: all 0.3s;
-  }
+.header_home::before,
+.header_food::before,
+.header_dolce::before,
+.header_drink::before,
+.header_newmenu::before,
+.header_signout::before {
+  background: rgb(180, 180, 180);
+  content: '';
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  transform-origin: center top;
+  transform: scale(0, 1);
+  transition: transform 0.3s;
+}
 
-  .sign_in {
-    color: white;
-    margin-right: 60px;
-    text-decoration: none;
-    transition: all 0.3s;
-  }
-  /*ここからホバー*/
-  .sign_up:hover {
-    font-size: 1.1rem;
-    color: rgb(214, 214, 214);
-  }
-  .sign_in:hover {
-    font-size: 1.1rem;
-    color: rgb(214, 214, 214);
-  }
-  /*ここまでホバー*/
-  /*ここまでサインアウト時*/
+.header_home:hover,
+.header_food:hover,
+.header_dolce:hover,
+.header_drink:hover,
+.header_newmenu:hover,
+.header_signout:hover {
+  color: rgb(180, 180, 180);
+}
+
+.header_home:hover::before,
+.header_food:hover::before,
+.header_dolce:hover::before,
+.header_drink:hover::before,
+.header_drink:hover::before,
+.header_newmenu:hover::before,
+.header_signout:hover::before {
+  transform-origin: center top;
+  transform: scale(1, 1);
+}
+/*ここまでサインイン時*/
+
+/*ここからサインアウト時*/
+.right_menus2 {
+  width: 100%;
+  height: 100%;
+}
+
+.right_menus2 ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.right_menus2 ul li {
+  list-style: none;
+}
+
+.sign_up {
+  color: white;
+  margin-right: 100px;
+  text-decoration: none;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.sign_in {
+  color: white;
+  margin-right: 60px;
+  text-decoration: none;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.sign_up::before,
+.sign_in::before {
+  background: rgb(180, 180, 180);
+  content: '';
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  transform-origin: center top;
+  transform: scale(0, 1);
+  transition: transform 0.3s;
+}
+.sign_up:hover,
+.sign_in:hover {
+  color: rgb(214, 214, 214);
+}
+
+.sign_up:hover::before,
+.sign_in:hover::before {
+  transform-origin: center top;
+  transform: scale(1, 1);
+}
+/*ここまでサインアウト時*/
+/* ここまでヘッダーライト */
 /* ここまでヘッダー */
 
 /* ここからフッター */
 footer {
   width: 100%;
   height: 15vh;
+  min-height: 120px;
   display: flex;
   flex-direction: column;
-  
   letter-spacing: 0.05em;
   background-color: #fff;
 }
 
+#empty {
+  width: 80%;
+  overflow: hidden;
+  margin: 0 auto;
+}
 .footer_empty {
   height: 1px;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid gray;
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.footer_empty.active {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: opacity 1.5s, transform 1.5s;
 }
 
 .footer_body {
@@ -221,3 +356,20 @@ footer {
     margin-left: 52%;
   }
   /* ここまでフッター */
+
+  /*ここからback to top*/
+  .back_to_top {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    background: rgb(65, 80, 72);
+    font-weight: 800;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    border-radius: 100%;
+    font-size: 30px;
+    color: #fff;
+    display: none;
+  }

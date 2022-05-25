@@ -1,14 +1,22 @@
 <div class="drink_container">
   <section class="drink01">
     <div class="drink_img_wrapper01">
-      <%= image_tag 'image26.jpeg', alt: 'フードの写真' %>
+      <%= image_tag 'image26.jpeg', alt: 'ドリンクの写真' %>
     </div>
     <div class="drink_overlay01"></div>
-    <p>こだわりの説明が入ります</p>
+    <div class="drink01_explain">
+      <h2 class="drink_h2_01">DRINK</h2>
+      <div class="drink01_sentence">
+        <p>オリジナルブレンドコーヒー、オーガニック紅茶、自家製ジンジャーエールなど</p>
+        <p>各種ドリンクを多数ご用意しております。</p>
+      </div>
+    </div>
   </section>
 
-  <section class="drink03">
-    <h2>recommended</h2>
+  <section class="drink02">
+    <h2>
+    <span class="drink02_span1">R</span><span class="drink02_span2">e</span><span class="drink02_span3">c</span><span class="drink02_span4">o</span><span class="drink02_span5">m</span><span class="drink02_span6">m</span><span class="drink02_span7">e</span><span class="drink02_span8">n</span><span class="drink02_span9">d</span><span class="drink02_span10">e</span><span class="drink02_span11">d</span>
+    </h2>
     <div class="drink_recommended01">
       <div class="drink_img_wrapper04">
         <%= image_tag 'image13.jpeg', alt: 'おすすめメニューの写真１' %>
@@ -36,21 +44,53 @@
     </div>
   </section>
 
-  <section class="drink04">
-    <div class="drink04_wrapper">
-      <h2>DRINK MENU</h2>
+  <section class="drink03">
+    <div class="drink03_wrapper">
+      <h2>
+        <span class="drink03_span1">D</span><span class="drink03_span2">r</span><span class="drink03_span3">i</span><span class="drink03_span4">n</span><span class="drink03_span5">k</span><span class="drink03_span10">&nbsp;</span><span class="drink03_span6">M</span><span class="drink03_span7">e</span><span class="drink03_span8">n</span><span class="drink03_span9">u</span>
+      </h2>
       <div class="drink_menus">
         <% drinks.each do |drink| %>
           <div class="drink_menu">
             <div class="drink_menu_img">
-              <%= link_to(image_tag(drink.image), "/menus/#{drink.id}/show") %>
+              <%= link_to(image_tag(drink.image), "/menus/#{drink.id}/show", data:{turbolinks: false}) %>
             </div>
             <div class="drink_menu_contents">
-              <div class="drink_menu_name"><%= link_to drink.name, "/menus/#{drink.id}/show" %></div>
+              <div class="drink_menu_name"><%= link_to drink.name, "/menus/#{drink.id}/show, data:{turbolinks: false}" %></div>
               <div class="drink_menu_price">￥<%= drink.price %></div>
             </div>
           </div>
         <% end %>
+      </div>
+    </div>
+  </section>
+
+  <section class="modal_page">
+    <div class="show_form_wrapper">
+      <div class="show_form_box">
+        <h2 class="show_form_title">New Recipe</h2>
+        <div class="show_form">
+          <%= form_with model: @menu, local: true do |f| %>
+            <%= f.label :category_id, 'カテゴリー', class: "show_label" %>
+            <%= f.collection_select(:category_id, Category.all, :id, :name, {},{class:"show_input"}) %>
+            <%= f.label :name, '名前', class: 'show_label' %>
+            <%= f.text_field :name, class:"show_input" %>
+            <%= f.label :explain, '説明', class: 'show_label' %>
+            <%= f.text_area :explain, rows: 3, class:"show_input" %>
+            <%= f.label :recipe, 'レシピ', class: 'show_label' %>
+            <%= f.text_area :recipe, rows: 3, class:"show_input" %>
+            <%= f.label :how_to, '作り方', class: 'show_label' %>
+            <%= f.text_area :how_to, rows: 3, class:"show_input" %>
+            <%= f.label :price, '値段', class: 'show_label' %>
+            <%= f.text_field :price, class:"show_input" %>
+            <%= f.file_field :image %>
+            <%= f.submit 'SEND', class:"show_submit" %>
+            <div class="show_form_buttons">
+              <%= link_to '◀︎ TOP', root_path, class: 'show_top', data:{turbolinks: false} %>
+              <span class="show_form_close">× CLOSE</span>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
   </section>

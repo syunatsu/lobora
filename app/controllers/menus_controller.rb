@@ -2,26 +2,24 @@ class MenusController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :update, :destroy]
 
   def top
+    @menu = Menu.new
   end
 
   def index
     @foods = Menu.where(category_id: 1)
     @dolces = Menu.where(category_id: 2)
     @drinks = Menu.where(category_id: 3)
+    @menu = Menu.new
 
     render "menus/_#{params[:name]}", locals: { foods: @foods, dolces: @dolces, drinks: @drinks }
-  end
-
-  def new
-    @menu = Menu.new
   end
 
   def create
     @menu = Menu.new(menu_params)
     if @menu.save
-      redirect_to root_path
+      redirect_back fallback_location: root_path
     else
-      render :new
+      redirect_back fallback_location: root_path
     end
   end
 

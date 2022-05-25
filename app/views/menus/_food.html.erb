@@ -4,11 +4,23 @@
       <%= image_tag 'image10.jpeg', alt: 'フードの写真' %>
     </div>
     <div class="food_overlay01"></div>
-    <p>こだわりの説明が入ります</p>
+    <div class="food01_explain">
+      <h2 class="food_h2_01">FOOD</h2>
+      <div class="food01_sentence">
+        <p>あえて期限切れ間近の食材を、時には期限切れの</p>
+        <p>食材を使用することで、独特の臭みとコクを生み</p>
+        <p>出しています。身体に優しい自慢の料理を、ぜひ</p>
+        <p>一度お召し上がりください。</p>
+      </div>
+    </div>
   </section>
 
   <section class="food02">
-    <h2>Special menu</h2>
+    <h2>
+    <span class="food02_span1">S</span><span class="food02_span2">p</span><span class="food02_span3">e</span><span class="food02_span4">c</span><span class="food02_span5">i</span><span class="food02_span6">a</span><span class="food02_span7">l</span><span class="food02_span12">&nbsp;</span><span class="food02_span8">M</span><span class="food02_span9">e</span><span class="food02_span10">n</span><span class="food02_span11">u</span>
+    </h2>
+
+    <div class="food02_wrapper1">
       <div class="food_special_explain01">
         <ul>
           <li>メニュー名</li>
@@ -19,21 +31,26 @@
       <div class="food_img_wrapper02">
         <%= image_tag 'image11.jpeg', alt: 'スペシャルメニューの写真１' %>
       </div>
-
-    <div class="food_special_explain02">
-      <ul>
-        <li>メニュー名</li>
-        <li>値段</li>
-        <li>メニュー内容</li>
-      </ul>
     </div>
-    <div class="food_img_wrapper03">
-      <%= image_tag 'image12.jpeg', alt: 'スペシャルメニューの写真２' %>
+
+    <div class="food02_wrapper2">
+      <div class="food_special_explain02">
+        <ul>
+          <li>メニュー名</li>
+          <li>値段</li>
+          <li>メニュー内容</li>
+        </ul>
+      </div>
+      <div class="food_img_wrapper03">
+        <%= image_tag 'image12.jpeg', alt: 'スペシャルメニューの写真２' %>
+      </div>
     </div>
   </section>
 
   <section class="food03">
-    <h2>recommended</h2>
+    <h2>
+    <span class="food03_span1">R</span><span class="food03_span2">e</span><span class="food03_span3">c</span><span class="food03_span4">o</span><span class="food03_span5">m</span><span class="food03_span6">m</span><span class="food03_span7">e</span><span class="food03_span8">n</span><span class="food03_span9">d</span><span class="food03_span10">e</span><span class="food03_span11">d</span>
+    </h2>
     <div class="food_recommended01">
       <div class="food_img_wrapper04">
         <%= image_tag 'image13.jpeg', alt: 'おすすめメニューの写真１' %>
@@ -62,20 +79,52 @@
   </section>
 
   <section class="food04">
-    <div class="food04_wrapper">
-      <h2>FOOD MENU</h2>
+    <div class="food04_container">
+      <h2>
+      <span class="food04_span1">F</span><span class="food04_span2">o</span><span class="food04_span3">o</span><span class="food04_span4">d</span><span class="food04_span9">&nbsp;</span><span class="food04_span5">M</span><span class="food04_span6">e</span><span class="food04_span7">n</span><span class="food04_span8">u</span>
+      </h2>
       <div class="food_menus">
         <% foods.each do |food| %>
-          <div class="food_menu">
+          <div class="food_menu<% food.id %>">
             <div class="food_menu_img">
-              <%= link_to(image_tag(food.image), "/menus/#{food.id}/show") %>
+              <%= link_to(image_tag(food.image), "/menus/#{food.id}/show", data:{turbolinks: false}) %>
             </div>
             <div class="food_menu_contents">
-              <div class="food_menu_name"><%= link_to food.name, "/menus/#{food.id}/show", action: :show %></div>
+              <div class="food_menu_name"><%= link_to food.name, "/menus/#{food.id}/show", action: :show, data:{turbolinks: false} %></div>
               <div class="food_menu_price">￥<%= food.price %></div>
             </div>
           </div>
         <% end %>
+      </div>
+    </div>
+  </section>
+
+  <section class="modal_page">
+    <div class="show_form_wrapper">
+      <div class="show_form_box">
+        <h2 class="show_form_title">New Recipe</h2>
+        <div class="show_form">
+          <%= form_with model: @menu, local: true do |f| %>
+            <%= f.label :category_id, 'カテゴリー', class: "show_label" %>
+            <%= f.collection_select(:category_id, Category.all, :id, :name, {},{class:"show_input"}) %>
+            <%= f.label :name, '名前', class: 'show_label' %>
+            <%= f.text_field :name, class:"show_input" %>
+            <%= f.label :explain, '説明', class: 'show_label' %>
+            <%= f.text_area :explain, rows: 3, class:"show_input" %>
+            <%= f.label :recipe, 'レシピ', class: 'show_label' %>
+            <%= f.text_area :recipe, rows: 3, class:"show_input" %>
+            <%= f.label :how_to, '作り方', class: 'show_label' %>
+            <%= f.text_area :how_to, rows: 3, class:"show_input" %>
+            <%= f.label :price, '値段', class: 'show_label' %>
+            <%= f.text_field :price, class:"show_input" %>
+            <%= f.file_field :image %>
+            <%= f.submit 'SEND', class:"show_submit" %>
+            <div class="show_form_buttons">
+              <%= link_to '◀︎ TOP', root_path, class: 'show_top', data:{turbolinks: false} %>
+              <span class="show_form_close">× CLOSE</span>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
   </section>
