@@ -245,7 +245,7 @@
   height: 70vh;
   position: absolute;
   top: 5%;
-  left: 42%;
+  left: 46%;
   opacity: 0;
   transform: translateY(100%);
 }
@@ -257,7 +257,7 @@
 }
 
 .food_special_explain01 ul {
-  margin: 12% 0 0 28%;
+  margin: 12% 0 0 24%;
 }
 
 .food_special_explain01 ul li {
@@ -337,7 +337,7 @@
 }
 
 .food_special_explain02 ul {
-  margin: 12% 0 0 28%;
+  margin: 12% 0 0 24%;
 }
 
 .food_special_explain02 ul li {
