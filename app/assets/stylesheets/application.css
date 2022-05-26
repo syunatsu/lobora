@@ -158,27 +158,33 @@ header {
 
 .header_newmenu {
   color: white;
+  font-size: 1.6rem;
+  margin-right: 5%;
   text-decoration: none;
-  margin-right: 80px;
   transition: all 0.3s;
   cursor: pointer;
   position: relative;
 }
+.header_newmenu:hover {
+  color: rgb(180, 180, 180);
+}
 
 .header_signout {
   color: white;
+  font-size: 1.8rem;
   text-decoration: none;
   margin-right: 50px;
   transition: all 0.3s;
   position: relative;
 }
+.header_signout:hover {
+  color: rgb(180, 180, 180);
+}
 
 .header_home::before,
 .header_food::before,
 .header_dolce::before,
-.header_drink::before,
-.header_newmenu::before,
-.header_signout::before {
+.header_drink::before {
   background: rgb(180, 180, 180);
   content: '';
   width: 100%;
@@ -195,9 +201,7 @@ header {
 .header_home:hover,
 .header_food:hover,
 .header_dolce:hover,
-.header_drink:hover,
-.header_newmenu:hover,
-.header_signout:hover {
+.header_drink:hover {
   color: rgb(180, 180, 180);
 }
 
@@ -206,8 +210,7 @@ header {
 .header_dolce:hover::before,
 .header_drink:hover::before,
 .header_drink:hover::before,
-.header_newmenu:hover::before,
-.header_signout:hover::before {
+.header_newmenu:hover::before {
   transform-origin: center top;
   transform: scale(1, 1);
 }

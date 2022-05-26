@@ -33,8 +33,10 @@
               <li><%= link_to 'FOOD', {controller: 'menus', action: 'index', name: 'food'}, class: 'header_food', data: {turbolinks: false} %></li>
               <li><%= link_to 'DOLCE', {controller: 'menus', action: 'index', name: 'dolce'}, class: 'header_dolce', data: {turbolinks: false} %></li>
               <li><%= link_to 'DRINK', {controller: 'menus', action: 'index', name: 'drink'}, class: 'header_drink', data: {turbolinks: false} %></li>
-              <li><span class="header_newmenu">NEW RECIPE</span></li>
-              <li><%= link_to 'SIGN OUT', destroy_user_session_path, method: :delete, class: 'header_signout' %> </li>
+              <li><span class="header_newmenu"><i class="fa-solid fa-plus"></i></span></li>
+              <li><%= link_to destroy_user_session_path, method: :delete, class: 'header_signout' do %> </li>
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                  <% end %>
             </ul>
           </div>
         <% else %>
