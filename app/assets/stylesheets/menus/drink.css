@@ -214,6 +214,7 @@
 .drink_recommended01 {
   width: 60%;
   height: 40vh;
+  min-height: 380px;
   background-color: #fff;
   margin-bottom: 2%;
   display: flex;
@@ -269,17 +270,18 @@
   margin-bottom: 12%;
 }
 .drink_recommended_explain01 li:nth-child(2) {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   margin-bottom: 5%;
 }
 .drink_recommended_explain01 li:nth-child(3) {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 600;
 }
 
 .drink_recommended02 {
   width: 60%;
   height: 40vh;
+  min-height: 380px;
   background-color: #fff;
   display: flex;
   justify-content: space-between;
@@ -334,11 +336,11 @@
   margin-bottom: 12%;
 }
 .drink_recommended_explain02 li:nth-child(2) {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   margin-bottom: 5%;
 }
 .drink_recommended_explain02 li:nth-child(3) {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 600;
 }
 /* ここまでdrink02 */

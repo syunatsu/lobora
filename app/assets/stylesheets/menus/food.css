@@ -482,6 +482,7 @@
 .food_recommended01 {
   width: 60%;
   height: 40vh;
+  min-height: 380px;
   background-color: #fff;
   margin-bottom: 2%;
   display: flex;
@@ -533,14 +534,14 @@
 .food_recommended_explain01 li:nth-child(1){
   font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 10%;
+  margin-bottom: 12%;
 }
 .food_recommended_explain01 li:nth-child(2) {
-  font-size: 0.9rem;
-  margin-bottom: 2%;
+  font-size: 0.85rem;
+  margin-bottom: 5%;
 }
 .food_recommended_explain01 li:nth-child(3) {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   margin-bottom: 8%;
 }
 .food_recommended_explain01 li:nth-child(4) {
@@ -551,6 +552,7 @@
 .food_recommended02 {
   width: 60%;
   height: 40vh;
+  min-height: 380px;
   background-color: #fff;
   display: flex;
   justify-content: space-between;
@@ -601,14 +603,14 @@
 .food_recommended_explain02 li:nth-child(1){
   font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 10%;
+  margin-bottom: 12%;
 }
 .food_recommended_explain02 li:nth-child(2) {
-  font-size: 0.9rem;
-  margin-bottom: 2%;
+  font-size: 0.85rem;
+  margin-bottom: 5%;
 }
 .food_recommended_explain02 li:nth-child(3) {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   margin-bottom: 8%;
 }
 .food_recommended_explain02 li:nth-child(4) {
