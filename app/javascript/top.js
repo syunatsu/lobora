@@ -25,22 +25,17 @@ function popup (){
 
 window.addEventListener('turbolinks:load', popup)
 
-/*container01*/
-$(function (){
-  $('.background01').addClass('active');
-})
-
 /*container02*/
 $(function (){
   $(window).on('scroll', function (){
-    $('.background02').each(function (){
+    $('.container02').each(function (){
       let target = $(this).offset().top;
       let scroll = $(window).scrollTop();
       let windowHeight = $(window).height();
       if (scroll > target - windowHeight + 100) {
-        $(this).addClass('active');
+        $('.background02').addClass('active');
       } else {
-        $(this).removeClass('active');
+        $('.background02').removeClass('active');
       }
     });
   });
@@ -49,15 +44,15 @@ $(function (){
 $(function (){
   $(window).on('scroll', function (){
     setTimeout(function (){
-      $('.concept_img').each(function (){
+      $('.container02').each(function (){
         let target = $(this).offset().top;
         let scroll = $(window).scrollTop();
         let windowHeight = $(window).height();
-        if (scroll > target - windowHeight + 50) {
-          $(this).addClass('active');
+        if (scroll > target - windowHeight + 130) {
+          $('.concept_img').addClass('active');
           $('.concept_messages').addClass('active');
         } else {
-          $(this).removeClass('active');
+          $('.concept_img').removeClass('active');
           $('.concept_messages').removeClass('active');
         }
       });
@@ -94,29 +89,14 @@ $(function (){
 /*container04*/
 $(function (){
   $(window).on('scroll', function (){
-    $('.container04').each(function (){
-      let target = $(this).offset().top;
-      let scroll = $(window).scrollTop();
-      let windowHeight = $(window).height();
-      if (scroll > target - windowHeight + 100) {
-        $('.theater_img').addClass('active');
-      } else {
-        $('.theater_img').removeClass('active');
-      }
-    });
-  });
-});
-
-$(function (){
-  $(window).on('scroll', function (){
-    $('.theater_left').each(function (){
+    $('.coffee_left').each(function (){
       let target = $(this).offset().top;
       let scroll = $(window).scrollTop();
       let windowHeight = $(window).height();
       if (scroll > target - windowHeight + 150) {
-        $('.theater_left').addClass('active');
+        $('.coffee_left').addClass('active');
       } else {
-        $('.theater_left').removeClass('active');
+        $('.coffee_left').removeClass('active');
       }
     });
   });

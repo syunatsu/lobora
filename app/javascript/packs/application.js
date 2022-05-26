@@ -38,16 +38,3 @@ $(function (){
     return false;
   });
 });
-
-$(function (){
-  $(window).on('scroll', function (){
-      let target = $('footer').offset().top;
-      let scroll = $(this).scrollTop();
-      let windowHeight = $(this).height();
-      if (scroll > target - windowHeight + 30) {
-        $('.footer_empty').addClass('active');
-      } else {
-        $('.footer_empty').removeClass('active');
-      }
-    });
-  });

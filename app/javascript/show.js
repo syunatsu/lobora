@@ -29,6 +29,7 @@ $(function() {
     $('.show_img_wrapper').addClass('active');
     $('.show_menu_recipe').addClass('active');
     $('.show_menu_how_to').addClass('active');
+    $('.show_back_btn').addClass('active');
     $('.edit_btn').addClass('active');
     $('.delete_btn').addClass('active');
 });

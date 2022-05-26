@@ -224,13 +224,14 @@
 .food_img_wrapper02.active {
   opacity: 1;
   transform: translateY(0%);
-  transition: opacity 1s, transform 0.7s;
+  transition: opacity 1.3s, transform 1.3s;
 }
 
 .food_img_wrapper02 img {
   width: 100%;
   height: 100%;
   transition: all 1s;
+  object-fit: cover;
 }
 
 .food_img_wrapper02 img:hover {
@@ -244,14 +245,14 @@
   height: 70vh;
   position: absolute;
   top: 5%;
-  left: 46%;
+  left: 42%;
   opacity: 0;
   transform: translateY(100%);
 }
 .food_special_explain01.active {
   opacity: 1;
   transform: translateY(0%);
-  transition: opacity 1s, transform 0.7s;
+  transition: opacity 1.3s, transform 1.3s;
   transition-delay: 0.1s;
 }
 
@@ -259,6 +260,29 @@
   margin: 12% 0 0 28%;
 }
 
+.food_special_explain01 ul li {
+  list-style: none;
+  letter-spacing: 0.03em;
+  line-height: 130%;
+}
+
+.food_special_explain01 ul li:nth-child(1) {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 3%;
+}
+.food_special_explain01 ul li:nth-child(2) {
+  font-weight: 600;
+  margin-bottom: 5%;
+}
+.food_special_explain01 ul li:nth-child(3) {
+  font-size: 0.9rem;
+  margin-bottom: 4%;
+}
+.food_special_explain01 ul li:nth-child(4) {
+  font-size: 0.7rem;
+}
+/*下段*/
 .food02_wrapper2 {
   width: 100%;
   height: 80vh;
@@ -280,13 +304,14 @@
 .food_img_wrapper03.active {
   opacity: 1;
   transform: translateY(0%);
-  transition: opacity 1s, transform 0.7s;
+  transition: opacity 1.3s, transform 1.3s;
 }
 
 .food_img_wrapper03 img {
   width: 100%;
   height: 100%;
   transition: all 1s;
+  object-fit: cover;
 }
 
 .food_img_wrapper03 img:hover {
@@ -307,12 +332,35 @@
 .food_special_explain02.active {
   opacity: 1;
   transform: translateY(0%);
-  transition: opacity 1s, transform 0.7s;
+  transition: opacity 1.3s, transform 1.3s;
   transition-delay: 0.1s;
 }
 
 .food_special_explain02 ul {
   margin: 12% 0 0 28%;
+}
+
+.food_special_explain02 ul li {
+  list-style: none;
+  letter-spacing: 0.03em;
+  line-height: 130%;
+}
+
+.food_special_explain02 ul li:nth-child(1) {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 3%;
+}
+.food_special_explain02 ul li:nth-child(2) {
+  font-weight: 600;
+  margin-bottom: 5%;
+}
+.food_special_explain02 ul li:nth-child(3) {
+  font-size: 0.9rem;
+  margin-bottom: 4%;
+}
+.food_special_explain02 ul li:nth-child(4) {
+  font-size: 0.7rem;
 }
 /* ここまでfood02 */
 
@@ -476,12 +524,28 @@
   margin-bottom: auto;
 }
 
-.food_recommended_explain01 li {
+.food_recommended_explain01 ul li {
   list-style: none;
+  letter-spacing: 0.03em;
+  line-height: 130%;
 }
 
-.food_recommended_explain01 li:first-child{
+.food_recommended_explain01 li:nth-child(1){
   font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10%;
+}
+.food_recommended_explain01 li:nth-child(2) {
+  font-size: 0.9rem;
+  margin-bottom: 2%;
+}
+.food_recommended_explain01 li:nth-child(3) {
+  font-size: 0.8rem;
+  margin-bottom: 8%;
+}
+.food_recommended_explain01 li:nth-child(4) {
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 .food_recommended02 {
@@ -528,12 +592,28 @@
   margin-bottom: auto;
 }
 
-.food_recommended_explain02 li {
+.food_recommended_explain02 ul li {
   list-style: none;
+  letter-spacing: 0.03em;
+  line-height: 130%;
 }
 
-.food_recommended_explain02 li:first-child{
+.food_recommended_explain02 li:nth-child(1){
   font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10%;
+}
+.food_recommended_explain02 li:nth-child(2) {
+  font-size: 0.9rem;
+  margin-bottom: 2%;
+}
+.food_recommended_explain02 li:nth-child(3) {
+  font-size: 0.8rem;
+  margin-bottom: 8%;
+}
+.food_recommended_explain02 li:nth-child(4) {
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 /* ここまでfood03 */
 

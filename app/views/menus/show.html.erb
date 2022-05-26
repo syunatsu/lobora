@@ -10,21 +10,26 @@
     </section>
 
     <section class="show02">
-      <div class="show_menu_recipe">
-        <span>材料</span><br><br>
-        <%= @menu.recipe %>
+      <div class="show02_for_hidden1">
+        <div class="show_menu_recipe">
+          <span>材料</span><br><br>
+          <%= @menu.recipe %>
+        </div>
       </div>
-      <div class="show02_for_flex">
+      <div class="show02_for_hidden2">
         <div class="show_menu_how_to">
           <span>作り方</span><br><br>
           <%= @menu.how_to %>
         </div>
-        <div class="show_buttons">
-          <span class="edit_btn"><i class="fa-solid fa-pen-to-square"></i></span>
-          <%= link_to menu_path(@menu), method: :delete, class: "delete_btn", data: {confirm: "コメントを削除しますか？"} do %>
-            <i class="fa-solid fa-trash-can"></i>
-          <% end %>
-        </div>
+      </div>
+      <div class="show_buttons">
+        <%= link_to "/menus/#{(@menu.category.name).downcase}", class:"show_back_btn", data: {turbolinks: false} do %>
+          <i class="fa-solid fa-arrow-left"></i>
+        <% end %>
+        <span class="edit_btn"><i class="fa-solid fa-pen-to-square"></i></span>
+        <%= link_to menu_path(@menu), method: :delete, class: "delete_btn", data: {confirm: "コメントを削除しますか？"} do %>
+          <i class="fa-solid fa-trash-can"></i>
+        <% end %>
       </div>
     </section>
   </div>
@@ -34,7 +39,7 @@
       <div class="show_form_box">
         <h2 class="show_form_title">New Recipe</h2>
         <div class="show_form">
-          <%= form_with model: @menu, local: true do |f| %>
+          <%= form_with model: @new_menu, local: true do |f| %>
             <%= f.label :category_id, 'カテゴリー', class: "show_label" %>
             <%= f.collection_select(:category_id, Category.all, :id, :name, {},{class:"show_input"}) %>
             <%= f.label :name, '名前', class: 'show_label' %>

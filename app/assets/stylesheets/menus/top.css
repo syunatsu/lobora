@@ -15,30 +15,34 @@
 .background01 {
   width: 100%;
   height: 95%;
-  opacity: 0;
+  background-size: cover;
+  background-position: center;
+  position: relative;
   overflow: hidden;
+  margin: 0 auto;
+  z-index: 0;
 }
 
-.background01.active {
-  width: 100%;
-  height: 95%;
-  opacity: 1;
-  transition: all 6s;
+.background01 > video {
+  min-height: 100%;
+  min-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
 }
 
-.background01 img {
+.top_overlay1 {
   width: 100%;
   height: 100%;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  transform: scale(1.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.15);
+  z-index: 2;
 }
 
-.background01.active > img {
-  transform: scale(1.0);
-  transition: all 4s;
-}
 /* ここまでcontainer01 */
 
 /* ここからcontainer02 */
@@ -53,14 +57,14 @@
 .background02 {
   width: 1px;
   height: 100%;
-  background-color: rgb(193, 156, 108);
+  background-color: rgb(113, 91, 63);
   position: absolute;
   top: 0;
   left: 0;
 }
 .background02.active {
   width: 65%;
-  background-color: rgb(139, 112, 76);
+  background-color: rgb(89, 67, 37);
   transition: width 0.7s, background-color 5s;
 }
 
@@ -76,7 +80,7 @@
 .concept_messages.active {
   transform: translate(0, 0);
   opacity: 1;
-  transition: transform 1s, opacity 0.7s;
+  transition: transform 1.5s, opacity 1.5s;
 }
 
 .concept_title {
@@ -98,7 +102,7 @@
 }
 
 .concept_title2 .last {
-  margin-bottom: 37%;
+  margin-bottom: 34%;
 }
 
 .concept_message {
@@ -121,10 +125,9 @@
   overflow: hidden;
   opacity: 0;
 }
-
 .concept_img.active {
   opacity: 1;
-  transition: opacity 1s; 
+  transition: opacity 1.8s; 
 }
 
 .concept_img img {
@@ -132,11 +135,11 @@
   width: 100%;
   object-fit: cover;
   transition: all 1s;
+  filter: brightness(90%);
 }
-
 .concept_img img:hover {
   transform: scale(1.2);
-  filter:brightness(70%);
+  filter: brightness(70%);
 
 }
 /* ここまでcontainer02 */
@@ -322,71 +325,79 @@
   overflow: hidden;
 }
 
-.theater_left {
-  width: 40%;
-  height: 60%;
+.coffee_left {
+  width: 45%;
+  height: 65%;
   color: white;
-  background-color: gray;
+  background-color: rgba(230, 230, 230, 0.9);
   position: absolute;
-  top: 35%;
-  left:0%;
+  top: 31%;
+  left: 2%;
   z-index: 1;
   transition: all 0.3s;
   opacity: 0;
 }
-.theater_left.active {
-  background-color: rgb(196, 196, 196);
+.coffee_left.active {
+  background-color: rgba(230, 230, 230, 0.9);
   color: black;
   opacity: 1;
   box-shadow: 0 0 10px black;
-  transition: background-color 4s, color 4s, opacity 2s, box-shadow 5s;
+  transition: transform 1s, color 4s, opacity 2s, box-shadow 5s;
+}
+.coffee_left.active::before {
+  background-color: rgba(230, 230, 230, 0.9);
+  filter: blur(10px);
+  position: absolute;
+  top: 31%;
+  left: 1%;
+}
+.coffee_left.active:hover {
+  transform: scale(1.05);
 }
 
-.theater_title p:nth-child(1) {
+.coffee_title p:nth-child(1) {
   font-size: 1.1rem;
   margin: 2% 0 4% 3%;
 }
 
-.theater_title p:nth-child(2) {
+.coffee_title p:nth-child(2) {
   font-size: 3rem;
   margin: 0 0 20% 3%;
 }
 
-.theater_explain {
+.coffee_explain {
   font-size: 0.8rem;
   letter-spacing: 0.02em;
   line-height: 130%;
   margin-left: 3%;
 }
 
-span.super {
-  vertical-align: super;
-  font-size: 0.3rem;
-}
-
-.theater_img {
+.coffee_video {
   height: 90%;
   width: 70%;
   position: absolute;
-  right: 0;
-  bottom: 10;
+  right: 1%;
+  bottom: 1.5%;
+  box-shadow: 0px 0px 5px 5px rgb(60, 60, 60);
   overflow: hidden;
   transition: all 1s;
-  opacity: 0;
-  transform: translateY(100%);
+}
+.coffee_video:hover {
+  transform: scale(0.97);
+  filter: brightness(70%);
 }
 
-.theater_img.active {
-  opacity: 1;
-  transform: translateY(0%);
-  transition: transform 0.7s, opacity 1.2s;
-}
-
-.theater_img img {
+.coffee_video > video {
   width: 100%;
   height: 100%;
+  min-width: 100%;
+  min-height: 100%;
   object-fit: cover;
-transition: all 1s
+  object-position: 0% 0%;
+  transition: all 1s;
+}
+.coffee_video > video:hover {
+  transform: scale(1.15);
 }
 
 .theater_left:hover {
@@ -478,7 +489,7 @@ html.modal_set {
   display: none;
   width: 100%;
   height: 100vh;
-  background-color: rgba(128, 128, 128, 0.97);
+  background-color: rgba(128, 128, 128, 0.91);
   position: fixed;
   top:0;
   left:0;
@@ -575,3 +586,10 @@ html.modal_set {
   cursor: pointer;
 }
 /* ここまでcontainer06 */
+
+@media screen and (max-width: 1610px) {
+.concept_img {
+  position: absolute;
+  left: 45%;
+}
+}

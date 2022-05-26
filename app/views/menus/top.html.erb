@@ -1,7 +1,8 @@
 <main class="index_main">
   <section class="container01">
     <div class="background01">
-      <%= image_tag 'image1.jpeg', alt:"トップイメージ" %>
+      <%= video_tag("/assets/videos/movie1.mp4", :autoplay=>true, :loop=>true, :muted=>true) %>
+      <div class="top_overlay1"></div>
     </div>
   </section>
 
@@ -57,19 +58,22 @@
   </section>
 
   <section class="container04">
-    <div class="theater_left">
-      <div class="theater_title">
-        <p>theater</p>
-        <p>WEEKEND CINEMA</p>
+    <div class="coffee_left">
+      <div class="coffee_title">
+        <p>COFEE</p>
+        <p>品質へのこだわり</p>
       </div>
-      <div class="theater_explain">
-        <p>毎週金曜日、土曜日には150インチの大画面で映画を楽しめるシアターも利用可能です。<span class="super">※要予約</span><br>
-          ご利用いただけるお客様には、ウェルカムドリンクとパーティーメニューのご用意をさせていた<br>
-          だきます。10人まで利用可能ですので、ご家族やご友人との楽しいひとときをお過ごしください。</p>
+      <div class="coffee_explain">
+        <p>
+        美味しいコーヒーには「3たて」が重要という言葉があります。<br>
+        これは、「炒りたて」「挽きたて」「淹れたて」の3つであり、美味しいコーヒーを作るにはこ<br>
+        の3つの条件を満たす必要があります。専門知識と高度な技術を持ったコーヒーマイスターの資<br>
+        格を持つバリスタが、炒りたての豆をその場で挽き一杯一杯丁寧にコーヒーを作っていきます。
+        </p>
       </div>
     </div>
-    <div class="theater_img">
-      <%= image_tag 'image6.jpeg', alt: "シアターの画像" %>
+    <div class="coffee_video">
+      <%= video_tag("/assets/videos/movie3.mp4", :autoplay=>true, :loop=>true, :muted=>true) %>
     </div>
   </section>
 
