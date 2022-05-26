@@ -6,6 +6,7 @@
     </div>
   </section>
 
+  <% if user_signed_in? %>
   <section class="container02">
     <div class="background02"></div>
     <div class="concept_messages">
@@ -76,6 +77,7 @@
       <%= video_tag("/videos/movie3.mp4", autoplay: true, loop: true, muted: true) %>
     </div>
   </section>
+  <% end %>
 
   <section class="container05">
     <div class="container05_border"></div>

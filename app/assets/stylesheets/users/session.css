@@ -25,9 +25,10 @@
 }
 
 .si_form {
+  height: 70%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -36,19 +37,40 @@
   padding: 5px;
 }
 
+.si_form input:nth-child(3) {
+  margin-bottom: 12%;
+}
+
+.si_buttons {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  height: 20%;
+}
+
+.si_back_btn {
+  height: 60%;
+  margin-top: auto;
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+  font-size: 0.9rem;
+  margin-right: 13%;
+}
+
 .si_submit {
+  display: inline-block;
   width: 50%;
+  height: 60%;
   border: 1px solid #ccc;
   border-bottom: 5px solid gray;
   box-shadow: 0 3px 3px rgb(30, 30, 30);
   transition: all 0.2s;
 }
-
 .si_submit:hover {
   margin-top: 2px;
   border-bottom:1px solid gray;
 }
-
 .si_submit:active {
   margin-top: 3px;
   border-bottom: none;

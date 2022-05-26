@@ -1,11 +1,13 @@
 <main class="si_main">
   <section class="si_container">
     <div class="sign_in_card">
-      <h2 class="si_title">LOBORA cafe</h2>
+      <h2 class="si_title">LOBOLA cafe</h2>
       <%= form_with model: @user, url: user_session_path, method: :post, class:"si_form", local: true do |f| %>
         <%= f.email_field :email, placeholder: 'メールアドレス', size: "50" %>
         <%= f.password_field :password, placeholder: 'パスワード', size: "50" %>
-        <%= f.submit 'SEND', class: "si_submit" %>
+        <div class="si_buttons">
+          <%= link_to '◀︎ TOP', root_path, class: "si_back_btn", data: {turbolinks: false} %>
+          <%= f.submit 'SEND', class: "si_submit" %>
       <% end%>
     </div>
   </section>
