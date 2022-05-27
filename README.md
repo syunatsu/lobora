@@ -37,11 +37,42 @@ https://lobora.herokuapp.com/
 # 洗い出した要件（要件定義シート）
 https://docs.google.com/spreadsheets/d/1ILvh_HevQeTyDnQOVs6UzDRJZOy3ONZCAIsOV7pqgMU/edit#gid=982722306
 
+# 実装した機能についての画像やGIFおよびその説明
+
+### トップページ
+[![Image from Gyazo](https://i.gyazo.com/e2d6abb338e3c42407d7c0c48427faad.gif)](https://gyazo.com/e2d6abb338e3c42407d7c0c48427faad)
+
+トップページは単調にならないよう、多くの要素に動きをつけた。ヘッダーは利便性を考え、上部に固定している。
+
+### メニューの表示ページ
+[![Image from Gyazo](https://i.gyazo.com/d938adb1d2de8229a8c2503b895d2249.gif)](https://gyazo.com/d938adb1d2de8229a8c2503b895d2249)
+
+表示ページもトップページと同様に、ほとんどの要素に動きがついている。
+
+### 新規投稿
+[![Image from Gyazo](https://i.gyazo.com/a51c1c4ef2ba5bef155adb233f1dc081.gif)](https://gyazo.com/a51c1c4ef2ba5bef155adb233f1dc081)
+
+新規投稿はページ右下の＋マークから、どのページからでも行うことができる。新規投稿ページへ遷移するのではなく、モーダルウィンドウが立ち上がる。投稿完了後は、投稿したメニューの表示ページへ遷移する。
+
+### 編集機能
+[![Image from Gyazo](https://i.gyazo.com/941745c66afbdac8b436755f2ab93a80.gif)](https://gyazo.com/941745c66afbdac8b436755f2ab93a80)
+
+投稿したメニューをクリックすることで、詳細ページへ遷移する。詳細ページには、メニューの画像、材料、作り方が記載されており、右下の青いボタンから内容を編集することができる。編集についてもモーダルウィンドウです。
+
+### 削除機能
+[![Image from Gyazo](https://i.gyazo.com/7ed192e12566137dc630e92bc0a712d0.gif)](https://gyazo.com/7ed192e12566137dc630e92bc0a712d0)
+
+詳細ページの編集ボタンの隣に配置している赤いボタンから、メニュー削除できる。削除前にはアラートが出るので、誤操作防止に配慮している。
+# 実装予定の機能
+- 検索機能
+- いいね(お気に入り)機能
+- レスポンシブ対応
+
 # データベース設計
-[![Image from Gyazo](https://i.gyazo.com/2c271ec5b7b3abdd554ec95ee40c98b7.png)](https://gyazo.com/2c271ec5b7b3abdd554ec95ee40c98b7)
+[![Image from Gyazo](https://i.gyazo.com/692764841d928327deeda859517f2829.png)](https://gyazo.com/692764841d928327deeda859517f2829)
 
 # 画面遷移図
-[![Image from Gyazo](https://i.gyazo.com/9ad9aff40a45371ea5f95841c4bf775f.png)](https://gyazo.com/9ad9aff40a45371ea5f95841c4bf775f)
+[![Image from Gyazo](https://i.gyazo.com/fc3667a1f2017f6b7a7a06ebbb814e18.png)](https://gyazo.com/fc3667a1f2017f6b7a7a06ebbb814e18)
 
 # 開発環境
 - フロントエンド
