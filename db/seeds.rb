@@ -7,3 +7,4 @@
 #     { email: mail, nickname: name, password: password }
 #   )
 # end
+
