@@ -33,7 +33,6 @@
               <li><%= link_to 'FOOD', {controller: 'menus', action: 'index', name: 'food'}, class: 'header_food', data: {turbolinks: false} %></li>
               <li><%= link_to 'DOLCE', {controller: 'menus', action: 'index', name: 'dolce'}, class: 'header_dolce', data: {turbolinks: false} %></li>
               <li><%= link_to 'DRINK', {controller: 'menus', action: 'index', name: 'drink'}, class: 'header_drink', data: {turbolinks: false} %></li>
-              <li><span class="header_newmenu"><i class="fa-solid fa-plus"></i></span></li>
               <li><%= link_to destroy_user_session_path, method: :delete, class: 'header_signout' do %> </li>
                     <i class="fa-solid fa-arrow-right-from-bracket"></i>
                   <% end %>
@@ -52,11 +51,11 @@
     
     <%= yield %>
 
-    <%# back_to_top %>
-    <%= link_to '#', class: "back_to_top", data: {turbolinks: false} do %>
-      <i class="fa-solid fa-angles-up"></i>
+    <%# new recipe %>
+    <% if user_signed_in? %>
+      <span class="new_recipe"><i class="fa-solid fa-plus"></i></span>
     <% end %>
-    <%# back_to_top %>
+    <%# new recipe %>
 
     <footer>
       <div id="empty">

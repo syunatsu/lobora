@@ -156,19 +156,6 @@ header {
   position: relative;
 } 
 
-.header_newmenu {
-  color: white;
-  font-size: 1.6rem;
-  margin-right: 5%;
-  text-decoration: none;
-  transition: all 0.3s;
-  cursor: pointer;
-  position: relative;
-}
-.header_newmenu:hover {
-  color: rgb(180, 180, 180);
-}
-
 .header_signout {
   color: white;
   font-size: 1.8rem;
@@ -331,8 +318,30 @@ footer {
   }
   /* ここまでフッター */
 
+/*ここから新規投稿*/
+.new_recipe {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  padding: 15px;
+  text-align: center;
+  background: rgb(175, 0, 0);
+  font-weight: 800;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  border-radius: 100%;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+}
+.new_recipe i:hover {
+  transform: rotateZ(180deg);
+  transition: transform 0.5s;
+}
+
   /*ここからback to top*/
-  .back_to_top {
+  /* .back_to_top {
     width: 50px;
     height: 50px;
     padding: 10px;
@@ -345,5 +354,6 @@ footer {
     border-radius: 100%;
     font-size: 30px;
     color: #fff;
+    cursor: pointer;
     display: none;
-  }
+  } */

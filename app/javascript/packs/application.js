@@ -22,19 +22,21 @@ require("../drink")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-$(function (){
-  $(window).on('scroll', function (){
-    if ($(this).scrollTop() > 1000) {
-      $('.back_to_top').fadeIn(300);
-    } else {
-      $('.back_to_top').fadeOut(300);
-    }
-  });
-});
 
-$(function (){
-  $('.back_to_top').on('click', function (){
-    $(html, body).animate({scrollTop : 0}, 1200);
-    return false;
-  });
-});
+//back to top
+// $(function (){
+//   $(window).on('scroll', function (){
+//     if ($(this).scrollTop() > 1000) {
+//       $('.back_to_top').fadeIn(300);
+//     } else {
+//       $('.back_to_top').fadeOut(300);
+//     }
+//   });
+// });
+
+// $(function (){
+//   $('.back_to_top').on('click', function (){
+//     $(html, body).animate({scrollTop : 0}, 1200);
+//     return false;
+//   });
+// });

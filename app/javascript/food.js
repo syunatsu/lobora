@@ -1,6 +1,6 @@
 //モーダルフォーム
 function popup (){
-  const modalOpen = document.querySelector(".header_newmenu");
+  const modalOpen = document.querySelector(".new_recipe");
   const modalClose = document.querySelector(".show_form_close");
   const modal = document.querySelector(".food05");
 
