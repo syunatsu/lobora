@@ -549,8 +549,9 @@ html.modal_set {
 .show_submit {
   display: block;
   width: 30%;
+  height: 5%;
   padding: 1%;
-  margin: 3% auto 0;
+  margin: 3% auto 2% auto;
   border: 1px solid rgb(65, 80, 72);
   border-bottom: 5px solid rgb(65, 80, 72);
   background-color: rgb(65, 80, 72);
