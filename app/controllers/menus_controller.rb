@@ -17,7 +17,7 @@ class MenusController < ApplicationController
   def create
     @menu = Menu.new(menu_params)
     if @menu.save
-      redirect_back fallback_location: root_path
+      redirect_to "/menus/#{(@menu.category.name).downcase}"
     else
       redirect_back fallback_location: root_path
     end
