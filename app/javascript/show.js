@@ -1,22 +1,26 @@
 function popup (){
 const buttonOpen = document.querySelector(".edit_btn");
-const buttonClose = document.querySelector(".show_form_close");
-const modal = document.querySelector(".modal_page");
-const modalBack = document.querySelector(".show_form_wrapper");
+const buttonClose = document.querySelector(".show_form_close2");
+const modal = document.querySelector(".modal_page2");
+const modalBack = document.querySelector(".show_form_wrapper2");
+const backGround = document.querySelector("html");
 
 buttonOpen.addEventListener("click", () => {
   //モーダルを開く
   modal.style.display = "block";
+  backGround.classList.add("modal_set");
 });
 
 buttonClose.addEventListener("click", () => {
   //モーダルを閉じる
   modal.style.display = "none";
+  backGround.classList.remove("modal_set");
 });
 
 document.addEventListener("click", (e) => {
   if (e.target == modalBack) {
     modal.style.display = "none";
+    backGround.classList.remove("modal_set");
   }
 });
 }

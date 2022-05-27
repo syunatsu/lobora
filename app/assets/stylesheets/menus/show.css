@@ -212,24 +212,42 @@
   margin-top: 2px;
 }
 
-/* ここからモーダルフォーム */
-.show03 {
+/* ここからモーダルフォーム(編集用) */
+html.modal_set {
+  overflow: hidden;
+}
+
+.modal_page2 {
   display: none;
   width: 100%;
-  height: 100%;
-  background-color: gray;
+  height: 100vh;
+  background-color: rgba(128, 128, 128, 0.91);
   position: fixed;
   top:0;
   left:0;
-  z-index: 10;
+  z-index: 100;
+  overflow: auto;
+}
+
+.show_form_wrapper2 {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
 }
 
 .show_form_box {
-  width: 40%;
-  margin: 0 auto;
-  padding-top: 7%;
+  width: 30%;
+  height: 100%;
+  margin: 6% auto 0 auto;
   animation-name: popup;
   animation-duration: 0.8s;
+}
+
+.show_form_title {
+  font-size: 1.7rem;
+  text-align: center;
+  margin-bottom: 5%;
 }
 
 @keyframes popup {
@@ -240,6 +258,11 @@
   to {
     opacity: 1;
   }
+}
+
+.show_form {
+  width: 100%;
+  height: 60%;
 }
 
 .show_label {
@@ -258,12 +281,25 @@
 .show_submit {
   display: block;
   width: 30%;
+  height: 5%;
   padding: 1%;
-  margin: 3% auto 0;
-  border: 1px solid rgb(10, 118, 0);
-  background-color: rgb(10, 118, 0);
+  margin: 3% auto 2% auto;
+  border: 1px solid rgb(65, 80, 72);
+  border-bottom: 5px solid rgb(65, 80, 72);
+  background-color: rgb(65, 80, 72);
   color: white;
-  box-shadow: 2px 2px 5px black;
+  box-shadow: 0 3px 3px black;
+  transition: all 0.2s;
+}
+
+.show_submit:hover {
+  margin-top: 3.2%;
+  border-bottom: 2px solid rgb(65, 80, 72);
+}
+
+.show_submit:active {
+  margin-top: 3.3%;
+  border-bottom: none;
 }
 
 .show_form_buttons {
@@ -276,10 +312,11 @@
   color: white;
 }
 
-.show_form_close {
+.show_form_close2 {
   display: inline-block;
   text-decoration: none;
   color: white;
   cursor: pointer;
 }
 /* ここまでモーダルフォーム */
+
