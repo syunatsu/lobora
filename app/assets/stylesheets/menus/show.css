@@ -46,7 +46,6 @@
 .show_img_wrapper.active {
   opacity: 1;
   transform: translateX(0%);
-  box-shadow: 20px -20px 5px 1px rgb(70, 70, 70);
   transition: opacity 1s, transform 1.5s;
 }
 
@@ -87,7 +86,7 @@
 .show_menu_recipe.active {
   opacity: 1;
   transform: translateY(0%);
-  transition: opacity 1s, transform 1.5s;
+  transition: opacity 1s, transform 1s;
   transition-delay: 0.6s;
 }
 
@@ -117,7 +116,7 @@
 .show_menu_how_to.active {
   opacity: 1;
   transform: translateY(0%);
-  transition: opacity 1s, transform 1.5s;
+  transition: opacity 1s, transform 1s;
   transition-delay: 0.6s;
 }
 
@@ -149,7 +148,7 @@
 .show_back_btn.active {
   opacity: 1;
   transform: translateY(0%);
-  transition: opacity 0.8s, transform 0.6s;
+  transition: opacity 0.6s, transform 0.6s;
   transition-delay: 1.9s;
 }
 .show_back_btn.active:hover {
@@ -177,7 +176,7 @@
 .edit_btn.active {
   opacity: 1;
   transform: translateY(0%);
-  transition: opacity 0.8s, transform 0.6s;
+  transition: opacity 0.6s, transform 0.6s;
   transition-delay: 1.9s;
 }
 .edit_btn.active:hover {
@@ -205,7 +204,7 @@
 .delete_btn.active {
   opacity: 1;
   transform: translateY(0%);
-  transition: opacity 0.8s, transform 0.6s;
+  transition: opacity 0.6s, transform 0.6s;
   transition-delay: 1.9s;
 }
 .delete_btn.active:hover {
