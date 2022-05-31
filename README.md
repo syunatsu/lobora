@@ -40,12 +40,12 @@ https://docs.google.com/spreadsheets/d/1ILvh_HevQeTyDnQOVs6UzDRJZOy3ONZCAIsOV7pq
 # 実装した機能についての画像やGIFおよびその説明
 
 ### トップページ
-[![Image from Gyazo](https://i.gyazo.com/e2d6abb338e3c42407d7c0c48427faad.gif)](https://gyazo.com/e2d6abb338e3c42407d7c0c48427faad)
+[![Image from Gyazo](https://i.gyazo.com/ae2dc86bc8fb7dfe9a5acf63b4f18bcb.gif)](https://gyazo.com/ae2dc86bc8fb7dfe9a5acf63b4f18bcb)
 
 トップページは単調にならないよう、多くの要素に動きをつけた。ヘッダーは利便性を考え、上部に固定している。
 
 ### メニューの表示ページ
-[![Image from Gyazo](https://i.gyazo.com/fadaf00c6bf1e9f806186d191f86a64d.gif)](https://gyazo.com/fadaf00c6bf1e9f806186d191f86a64d)
+[![Image from Gyazo](https://i.gyazo.com/40adbb54546ed2377eb77433f334955a.gif)](https://gyazo.com/40adbb54546ed2377eb77433f334955a)
 
 表示ページもトップページと同様に、ほとんどの要素に動きがついている。
 
@@ -60,7 +60,7 @@ https://docs.google.com/spreadsheets/d/1ILvh_HevQeTyDnQOVs6UzDRJZOy3ONZCAIsOV7pq
 投稿したメニューをクリックすることで、詳細ページへ遷移する。詳細ページには、メニューの画像、材料、作り方が記載されており、右下の青いボタンから内容を編集することができる。編集についてもモーダルウィンドウです。
 
 ### 削除機能
-[![Image from Gyazo](https://i.gyazo.com/7c7017141ebc4ae5eb8f812bb4cf2846.gif)](https://gyazo.com/7c7017141ebc4ae5eb8f812bb4cf2846)
+[![Image from Gyazo](https://i.gyazo.com/9ea1a317c2866ac5d5c58ff5d262995a.gif)](https://gyazo.com/9ea1a317c2866ac5d5c58ff5d262995a)
 
 詳細ページの編集ボタンの隣に配置している赤いボタンから、メニュー削除できる。削除前にはアラートが出るので、誤操作防止に配慮している。
 # 実装予定の機能
