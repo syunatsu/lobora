@@ -39,13 +39,13 @@ https://docs.google.com/spreadsheets/d/1ILvh_HevQeTyDnQOVs6UzDRJZOy3ONZCAIsOV7pq
 
 # 実装した機能についての画像やGIFおよびその説明
 
-### トップページ
-[![Image from Gyazo](https://i.gyazo.com/ae2dc86bc8fb7dfe9a5acf63b4f18bcb.gif)](https://gyazo.com/ae2dc86bc8fb7dfe9a5acf63b4f18bcb)
+### トップページ(gifが反映されないため代替画像)
+[![Image from Gyazo](https://i.gyazo.com/77ee97966b718c498d308c00caf0cb08.png)](https://gyazo.com/77ee97966b718c498d308c00caf0cb08)
 
 トップページは単調にならないよう、多くの要素に動きをつけた。ヘッダーは利便性を考え、上部に固定している。
 
-### メニューの表示ページ
-[![Image from Gyazo](https://i.gyazo.com/40adbb54546ed2377eb77433f334955a.gif)](https://gyazo.com/40adbb54546ed2377eb77433f334955a)
+### メニューの表示ページ(gifが反映されないため代替画像)
+[![Image from Gyazo](https://i.gyazo.com/5579e980558cb6337769c4650f14f88c.jpg)](https://gyazo.com/5579e980558cb6337769c4650f14f88c)
 
 表示ページもトップページと同様に、ほとんどの要素に動きがついている。
 
@@ -87,4 +87,4 @@ https://docs.google.com/spreadsheets/d/1ILvh_HevQeTyDnQOVs6UzDRJZOy3ONZCAIsOV7pq
 - 見た目が素敵なページにしたかったため、各配置やアニメーションをつけた
 - モデルやコントローラーを多数作成して複雑にならないように、menusコントローラーの<br>
   indexアクションのみでFOOD、DOLCE、DRINKページへ遷移できるようにした
-- 新規投稿ページは、チープなイメージにならないようにモーダルウィンドウで実装した
+- 新規投稿ページ、編集ページは、チープなイメージにならないようにモーダルウィンドウで実装した
